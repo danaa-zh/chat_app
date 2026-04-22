@@ -1,0 +1,49 @@
+{
+  "@@locale": "kk",
+  "appName": "AlmaTalk",
+  "splashLoading": "Жүктелуде...",
+  "loginTitle": "Қош келдіңіз",
+  "loginSubtitle": "Жалғастыру үшін кіріңіз",
+  "emailHint": "Электрондық пошта",
+  "passwordHint": "Құпиясөз",
+  "signInButton": "Кіру",
+  "forgotPassword": "Құпиясөзді ұмыттыңыз ба?",
+  "noAccount": "Аккаунтыңыз жоқ па?",
+  "signUp": "Тіркелу",
+  "invalidEmailError": "Дұрыс email енгізіңіз.",
+  "passwordRequiredError": "Құпиясөз міндетті.",
+  "passwordTooShortError": "Құпиясөз кемі 6 таңбадан тұруы керек.",
+  "authInvalidCredentials": "Кіру деректері қате.",
+  "authUserNotFound": "Пайдаланушы табылмады.",
+  "authWrongPassword": "Құпиясөз қате.",
+  "authNetworkError": "Желі қатесі. Интернетті тексеріңіз.",
+  "authUnknownError": "Қате орын алды. Қайтадан көріңіз.",
+  "signInWithGoogle": "Google арқылы кіру",
+  "signInError": "Кіру сәтсіз аяқталды. Қайта көріңіз.",
+  "tabChats": "Чаттар",
+  "tabFriends": "Достар",
+  "tabFindFriends": "Достарды табу",
+  "tabProfile": "Профиль",
+  "greeting": "Сәлем, {name}!",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "profileTitle": "Профиль",
+  "email": "Электрондық пошта",
+  "signOut": "Шығу",
+  "settingsTitle": "Параметрлер",
+  "settingsThemeMode": "Тақырып режимі",
+  "settingsLanguage": "Тіл",
+  "themeModeSystem": "Жүйелік",
+  "themeModeLight": "Жарық",
+  "themeModeDark": "Қараңғы",
+  "languageEnglish": "Ағылшын",
+  "languageRussian": "Орыс",
+  "languageKazakh": "Қазақ",
+  "emptyTitle": "Әзірге бос",
+  "emptySubtitle": "Әрекеттен кейін контент пайда болады."
+}

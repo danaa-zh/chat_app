@@ -1,0 +1,49 @@
+{
+  "@@locale": "en",
+  "appName": "AlmaTalk",
+  "splashLoading": "Loading...",
+  "loginTitle": "Welcome",
+  "loginSubtitle": "Sign in to continue",
+  "emailHint": "Email address",
+  "passwordHint": "Password",
+  "signInButton": "Sign In",
+  "forgotPassword": "Forgot password?",
+  "noAccount": "Don't have an account?",
+  "signUp": "Sign Up",
+  "invalidEmailError": "Please enter a valid email.",
+  "passwordRequiredError": "Password is required.",
+  "passwordTooShortError": "Password must be at least 6 characters.",
+  "authInvalidCredentials": "Invalid credentials. Please try again.",
+  "authUserNotFound": "User not found.",
+  "authWrongPassword": "Wrong password.",
+  "authNetworkError": "Network error. Check your connection.",
+  "authUnknownError": "Something went wrong. Please try again.",
+  "signInWithGoogle": "Sign in with Google",
+  "signInError": "Sign-in failed. Please try again.",
+  "tabChats": "Chats",
+  "tabFriends": "Friends",
+  "tabFindFriends": "Find Friends",
+  "tabProfile": "Profile",
+  "profileTitle": "Profile",
+  "greeting": "Hello, {name}!",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "email": "Email",
+  "signOut": "Sign Out",
+  "settingsTitle": "Settings",
+  "settingsThemeMode": "Theme mode",
+  "settingsLanguage": "Language",
+  "themeModeSystem": "System",
+  "themeModeLight": "Light",
+  "themeModeDark": "Dark",
+  "languageEnglish": "English",
+  "languageRussian": "Russian",
+  "languageKazakh": "Kazakh",
+  "emptyTitle": "Nothing here yet",
+  "emptySubtitle": "Content will appear after actions."
+}
