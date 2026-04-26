@@ -41,13 +41,16 @@ dependencies:
   go_router: ^16.3.0
   equatable: ^2.0.7
   intl: ^0.20.2
-  flutter_svg: ^2.2.2
   get: ^4.7.2
   firebase_core: ^4.7.0
   firebase_auth: ^6.4.0
   cloud_firestore: ^6.3.0
   google_fonts: ^8.0.2
   uuid: ^4.5.3
+  flutter_dotenv: ^5.2.1
+  google_sign_in: ^6.2.2
+  logger: ^2.5.0
+  flutter_svg: ^2.2.4
   
 
 dev_dependencies:
@@ -60,6 +63,29 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.7
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/png/icon_regular.png"
+  adaptive_icon_background: "#9CAD75"
+  adaptive_icon_foreground: "assets/png/icon_foreground.png"
+
+flutter_native_splash:
+  color: "#9CAD75"
+  image: assets/png/splash_regular.png
+  android: true
+  ios: true
+  web: false
+
+  android_12:
+    color: "#9CAD75"
+    image: assets/png/splash_android12.png
+    icon_background_color: "#EADDCA"
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -76,6 +102,7 @@ flutter:
   assets:
     - assets/svg/
     - assets/png/
+    - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -1,84 +1,63 @@
-import 'package:equatable/equatable.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-
-/// Модель пользователя.
-///
-/// Используется в BLoC-состояниях и для передачи данных
-/// между слоями. Расширяет [Equatable], чтобы BLoC мог
-/// корректно сравнивать состояния (== работает по полям).
-///
-/// Три фабричных конструктора:
-/// - [fromJson]  — из Map (Firestore).
-/// - [toJson]    — в Map (для сохранения в Firestore).
-/// - [fromFirebaseUser] — из объекта [User] (FirebaseAuth).
-class UserModel extends Equatable {
-  /// Уникальный идентификатор (совпадает с uid в FirebaseAuth).
-  final String uid;
-
-  /// Отображаемое имя.
-  final String displayName;
-
-  /// Email пользователя.
+class UserModel {
+  final String id;
   final String email;
+  final String displayName;
+  final String photoURL;
+  final bool isOnline;
+  final DateTime lastSeen;
+  final DateTime createdAt;
 
-  /// URL аватара (может быть пустой строкой).
-  final String photoUrl;
-
-  const UserModel({
-    required this.uid,
-    required this.displayName,
+  UserModel({
+    required this.id,
     required this.email,
-    required this.photoUrl,
+    required this.displayName,
+    this.photoURL = "",
+    this.isOnline = false,
+    required this.lastSeen,
+    required this.createdAt,
   });
 
-  /// Пустой пользователь — используется как дефолтное значение
-  /// вместо `null` (удобнее проверять `user == UserModel.empty`).
-  static const UserModel empty = UserModel(
-    uid: '',
-    displayName: '',
-    email: '',
-    photoUrl: '',
-  );
-
-  /// Пользователь пустой?
-  bool get isEmpty => this == empty;
-
-  /// Пользователь НЕ пустой?
-  bool get isNotEmpty => this != empty;
-
-  // ── Фабрики ──────────────────────────────────────────────────
-
-  /// Создать [UserModel] из Map (обычно из Firestore-документа).
-  factory UserModel.fromJson(Map<String, dynamic> json) {
-    return UserModel(
-      uid: json['uid'] as String? ?? '',
-      displayName: json['displayName'] as String? ?? '',
-      email: json['email'] as String? ?? '',
-      photoUrl: json['photoUrl'] as String? ?? '',
-    );
-  }
-
-  /// Создать [UserModel] из [User] (FirebaseAuth).
-  factory UserModel.fromFirebaseUser(User user) {
-    return UserModel(
-      uid: user.uid,
-      displayName: user.displayName ?? '',
-      email: user.email ?? '',
-      photoUrl: user.photoURL ?? '',
-    );
-  }
-
-  /// Конвертировать в Map (для сохранения в Firestore).
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic> toMap() {
     return {
-      'uid': uid,
-      'displayName': displayName,
+      "id": id,
       'email': email,
-      'photoUrl': photoUrl,
+      'displayName': displayName,
+      'photoURL': photoURL,
+      'isOnline': isOnline,
+      'lastSeen': lastSeen,
+      'createdAt': createdAt,
     };
   }
 
-  /// Equatable — список полей для сравнения.
-  @override
-  List<Object?> get props => [uid, displayName, email, photoUrl];
+  static UserModel fromMap(Map<String, dynamic> map) {
+    return UserModel(
+      id: map['id'] ?? '',
+      email: map['email'] ?? '',
+      displayName: map['displayName'] ?? '',
+      photoURL: map['photoURL'] ?? '',
+      isOnline: map['isOnline'] ?? false,
+      lastSeen: DateTime.fromMillisecondsSinceEpoch(map['lastSeen'] ?? 0),
+      createdAt: DateTime.fromMillisecondsSinceEpoch(map['createdAt'] ?? 0),
+    );
+  }
+
+  UserModel copyWith({
+    String? id,
+    String? email,
+    String? displayName,
+    String? photoURL,
+    bool? isOnline,
+    DateTime? lastSeen,
+    DateTime? createdAt,
+  }) {
+    return UserModel(
+      id: id ?? this.id,
+      email: email ?? this.email,
+      displayName: displayName ?? this.displayName,
+      photoURL: photoURL ?? this.photoURL,
+      isOnline: isOnline ?? this.isOnline,
+      lastSeen: lastSeen ?? this.lastSeen,
+      createdAt: createdAt ?? this.createdAt,
+    );
+  }
 }

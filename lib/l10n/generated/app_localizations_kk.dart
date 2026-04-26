@@ -12,118 +12,335 @@ class AppLocalizationsKk extends AppLocalizations {
   String get appName => 'AlmaTalk';
 
   @override
+  String get splashTagline => 'Достарыңызбен лезде байланысыңыз';
+
+  @override
   String get splashLoading => 'Жүктелуде...';
 
   @override
   String get loginTitle => 'Қош келдіңіз';
 
   @override
-  String get loginSubtitle => 'Жалғастыру үшін кіріңіз';
+  String get loginSubtitle => 'Жалғастыру үшін жүйеге кіріңіз';
 
   @override
-  String get emailHint => 'Электрондық пошта';
-
-  @override
-  String get passwordHint => 'Құпиясөз';
-
-  @override
-  String get signInButton => 'Кіру';
-
-  @override
-  String get forgotPassword => 'Құпиясөзді ұмыттыңыз ба?';
-
-  @override
-  String get noAccount => 'Аккаунтыңыз жоқ па?';
+  String get signIn => 'Кіру';
 
   @override
   String get signUp => 'Тіркелу';
 
   @override
-  String get invalidEmailError => 'Дұрыс email енгізіңіз.';
+  String get userNotFoundError => 'Бұл email тіркелмеген.';
 
   @override
-  String get passwordRequiredError => 'Құпиясөз міндетті.';
+  String get goToRegister => 'Тіркелу';
 
   @override
-  String get passwordTooShortError => 'Құпиясөз кемі 6 таңбадан тұруы керек.';
-
-  @override
-  String get authInvalidCredentials => 'Кіру деректері қате.';
-
-  @override
-  String get authUserNotFound => 'Пайдаланушы табылмады.';
-
-  @override
-  String get authWrongPassword => 'Құпиясөз қате.';
-
-  @override
-  String get authNetworkError => 'Желі қатесі. Интернетті тексеріңіз.';
-
-  @override
-  String get authUnknownError => 'Қате орын алды. Қайтадан көріңіз.';
+  String get orContinueWith => 'немесе арқылы кіру';
 
   @override
   String get signInWithGoogle => 'Google арқылы кіру';
 
   @override
-  String get signInError => 'Кіру сәтсіз аяқталды. Қайта көріңіз.';
+  String get createAccount => 'Аккаунт ашу';
 
   @override
-  String get tabChats => 'Чаттар';
+  String get forgotPassword => 'Құпия сөзді ұмыттыңыз ба?';
 
   @override
-  String get tabFriends => 'Достар';
+  String get sendResetLink => 'Сілтемені жіберу';
 
   @override
-  String get tabFindFriends => 'Достарды табу';
+  String get rememberPassword => 'Құпия сөз есіңізде ме?';
 
   @override
-  String get tabProfile => 'Профиль';
+  String get alreadyHaveAccount => 'Аккаунтыңыз бар ма?';
+
+  @override
+  String get dontHaveAccount => 'Аккаунтыңыз жоқ па?';
+
+  @override
+  String get displayNameHint => 'Көрінетін есім';
+
+  @override
+  String get emailAddressHint => 'Электрондық пошта';
+
+  @override
+  String get passwordHint => 'Құпия сөз';
+
+  @override
+  String get confirmPasswordHint => 'Құпия сөзді растаңыз';
+
+  @override
+  String get currentPasswordHint => 'Қазіргі құпия сөз';
+
+  @override
+  String get newPasswordHint => 'Жаңа құпия сөз';
+
+  @override
+  String get confirmNewPasswordHint => 'Жаңа құпия сөзді растаңыз';
+
+  @override
+  String get invalidEmailError => 'Дұрыс email енгізіңіз.';
+
+  @override
+  String get passwordRequiredError => 'Құпия сөз қажет.';
+
+  @override
+  String get passwordTooShortError =>
+      'Құпия сөз кем дегенде 6 таңбадан тұруы керек.';
+
+  @override
+  String get fieldRequiredError => 'Бұл өрісті толтыру қажет.';
+
+  @override
+  String get passwordMismatchError => 'Құпия сөздер сәйкес келмейді.';
+
+  @override
+  String get authInvalidCredentials => 'Қате мәліметтер. Қайта көріңіз.';
+
+  @override
+  String get authUserNotFound => 'Пайдаланушы табылмады.';
+
+  @override
+  String get authWrongPassword => 'Құпия сөз қате.';
+
+  @override
+  String get authNetworkError => 'Желі қатесі. Байланысты тексеріңіз.';
+
+  @override
+  String get authUnknownError => 'Бірдеңе дұрыс болмады. Қайта көріңіз.';
+
+  @override
+  String get authEmailAlreadyInUse => 'Бұл email тіркелген.';
+
+  @override
+  String get authWeakPassword => 'Құпия сөз тым әлсіз.';
+
+  @override
+  String get chatsTitle => 'Чаттар';
+
+  @override
+  String get searchConversations => 'Әңгімелерді іздеу';
+
+  @override
+  String get filterAll => 'Барлығы';
+
+  @override
+  String get filterUnread => 'Оқылмағандар';
+
+  @override
+  String get filterRequest => 'Сұраныстар';
+
+  @override
+  String get filterActive => 'Белсенділер';
+
+  @override
+  String get newChat => 'Жаңа чат';
+
+  @override
+  String get noConversationsYet => 'Белсенді чаттар жоқ';
+
+  @override
+  String get noConversationsDescription => 'Достарыңызбен сөйлесуді бастаңыз';
+
+  @override
+  String get viewFriends => 'Достар тізімі';
+
+  @override
+  String get findPeople => 'Адамдарды іздеу';
+
+  @override
+  String get friendsTitle => 'Достар';
+
+  @override
+  String get searchFriends => 'Достарды іздеу';
+
+  @override
+  String get online => 'желіде';
+
+  @override
+  String get offline => 'желіде емес';
+
+  @override
+  String get lastSeen => 'жақында болған';
+
+  @override
+  String get addFriend => 'Қосу';
+
+  @override
+  String get friendRequestsTitle => 'Достық сұраныстары';
+
+  @override
+  String get received => 'Алынғандар';
+
+  @override
+  String get sent => 'Жіберілгендер';
+
+  @override
+  String get accept => 'Қабылдау';
+
+  @override
+  String get decline => 'Бас тарту';
+
+  @override
+  String get pending => 'Күтілуде';
+
+  @override
+  String get accepted => 'Қабылданды';
+
+  @override
+  String get requestSent => 'Сұраныс жіберілді';
+
+  @override
+  String get notificationsTitle => 'Хабарламалар';
+
+  @override
+  String get markAllRead => 'Барлығын оқу';
+
+  @override
+  String get notificationEmptyState => 'Әзірге хабарламалар жоқ';
+
+  @override
+  String get notificationWelcomeTitle => 'AlmaTalk-қа қош келдіңіз!';
+
+  @override
+  String get notificationWelcomeDesc =>
+      'Біз сізді мұнда көргенімізге қуаныштымыз. Қазір сөйлесуді бастаңыз!';
+
+  @override
+  String get notificationRequestAcceptedTitle => 'Сұраныс қабылданды';
+
+  @override
+  String get notificationNewRequestTitle => 'Жаңа достық сұранысы';
+
+  @override
+  String get notificationReminderTitle => 'Ескерту';
+
+  @override
+  String get notificationReminderDesc =>
+      'Оқылмаған хабарламаларды тексеруді ұмытпаңыз.';
+
+  @override
+  String get notificationSystemUpdateTitle => 'Жүйелік жаңарту';
+
+  @override
+  String get notificationSystemUpdateDesc =>
+      'Қолданбаның жаңа нұсқасы қолжетімді.';
+
+  @override
+  String get typeMessage => 'Хабарлама жазыңыз...';
+
+  @override
+  String get send => 'Жіберу';
 
   @override
   String get profileTitle => 'Профиль';
 
   @override
-  String greeting(String name) {
-    return 'Сәлем, $name!';
-  }
+  String get settingsTitle => 'Баптаулар';
 
   @override
-  String get email => 'Электрондық пошта';
+  String get settingsAppSettings => 'Қолданба баптаулары';
 
   @override
-  String get signOut => 'Шығу';
-
-  @override
-  String get settingsTitle => 'Параметрлер';
+  String get settingsAccount => 'Аккаунт';
 
   @override
   String get settingsThemeMode => 'Тақырып режимі';
 
   @override
-  String get settingsLanguage => 'Тіл';
+  String get themeSystem => 'Жүйелік';
 
   @override
-  String get themeModeSystem => 'Жүйелік';
+  String get themeLight => 'Ашық';
 
   @override
-  String get themeModeLight => 'Жарық';
+  String get themeDark => 'Қараңғы';
 
   @override
-  String get themeModeDark => 'Қараңғы';
+  String get settingsChangeLanguage => 'Тіл';
 
   @override
-  String get languageEnglish => 'Ағылшын';
+  String get settingsSelectLanguage => 'Тілді таңдау';
 
   @override
-  String get languageRussian => 'Орыс';
+  String get settingsSave => 'Өзгерістерді сақтау';
 
   @override
-  String get languageKazakh => 'Қазақ';
+  String get settingsSignOut => 'Шығу';
 
   @override
-  String get emptyTitle => 'Әзірге бос';
+  String get settingsDeleteAccount => 'Аккаунтты жою';
 
   @override
-  String get emptySubtitle => 'Әрекеттен кейін контент пайда болады.';
+  String get changePasswordTitle => 'Құпия сөзді өзгерту';
+
+  @override
+  String get updatePassword => 'Құпия сөзді жаңарту';
+
+  @override
+  String get passwordUpdatedSuccess => 'Құпия сөз сәтті өзгертілді';
+
+  @override
+  String get signOut => 'Шығу';
+
+  @override
+  String get fullName => 'Толық есім';
+
+  @override
+  String get email => 'Электрондық пошта';
+
+  @override
+  String get username => 'Қолданушы аты';
+
+  @override
+  String get personalInfo => 'Жеке ақпарат';
+
+  @override
+  String get findPeopleTitle => 'Адамдарды іздеу';
+
+  @override
+  String get searchUsers => 'Қолданушыларды іздеу...';
+
+  @override
+  String get noUsersFound => 'Қолданушылар табылмады';
+
+  @override
+  String get searchToFindFriends =>
+      'Дос ретінде қосу үшін қолданушыларды іздеңіз';
+
+  @override
+  String get declined => 'Бас тартылды';
+
+  @override
+  String get accountTypePremium => 'Премиум';
+
+  @override
+  String get accountTypeStandard => 'Стандартты';
+
+  @override
+  String get noChatsFound => 'Чаттар табылмады';
+
+  @override
+  String get failedToLoadChats => 'Чаттарды жүктеу сәтсіз аяқталды';
+
+  @override
+  String get failedToLoadMessages => 'Хабарламаларды жүктеу сәтсіз аяқталды';
+
+  @override
+  String get failedToSearchUsers => 'Қолданушыларды іздеу сәтсіз аяқталды';
+
+  @override
+  String get errorPasswordsDoNotMatch => 'Құпия сөздер сәйкес келмейді';
+
+  @override
+  String notificationRequestAcceptedDesc(String name) {
+    return '$name сіздің достық сұранысыңызды қабылдады.';
+  }
+
+  @override
+  String notificationNewRequestDesc(String name) {
+    return 'Сізде $name пайдаланушысынан жаңа достық сұранысы бар.';
+  }
 }

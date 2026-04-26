@@ -106,6 +106,12 @@ abstract class AppLocalizations {
   /// **'AlmaTalk'**
   String get appName;
 
+  /// No description provided for @splashTagline.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect with friends instantly'**
+  String get splashTagline;
+
   /// No description provided for @splashLoading.
   ///
   /// In en, this message translates to:
@@ -115,7 +121,7 @@ abstract class AppLocalizations {
   /// No description provided for @loginTitle.
   ///
   /// In en, this message translates to:
-  /// **'Welcome'**
+  /// **'Welcome Back'**
   String get loginTitle;
 
   /// No description provided for @loginSubtitle.
@@ -124,11 +130,89 @@ abstract class AppLocalizations {
   /// **'Sign in to continue'**
   String get loginSubtitle;
 
-  /// No description provided for @emailHint.
+  /// No description provided for @signIn.
   ///
   /// In en, this message translates to:
-  /// **'Email address'**
-  String get emailHint;
+  /// **'Sign In'**
+  String get signIn;
+
+  /// No description provided for @signUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up'**
+  String get signUp;
+
+  /// No description provided for @userNotFoundError.
+  ///
+  /// In en, this message translates to:
+  /// **'No account found with this email.'**
+  String get userNotFoundError;
+
+  /// No description provided for @goToRegister.
+  ///
+  /// In en, this message translates to:
+  /// **'Create an account'**
+  String get goToRegister;
+
+  /// No description provided for @orContinueWith.
+  ///
+  /// In en, this message translates to:
+  /// **'or continue with'**
+  String get orContinueWith;
+
+  /// No description provided for @signInWithGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with Google'**
+  String get signInWithGoogle;
+
+  /// No description provided for @createAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Account'**
+  String get createAccount;
+
+  /// No description provided for @forgotPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot Password?'**
+  String get forgotPassword;
+
+  /// No description provided for @sendResetLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Reset Link'**
+  String get sendResetLink;
+
+  /// No description provided for @rememberPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Remember password?'**
+  String get rememberPassword;
+
+  /// No description provided for @alreadyHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get alreadyHaveAccount;
+
+  /// No description provided for @dontHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t have an account?'**
+  String get dontHaveAccount;
+
+  /// No description provided for @displayNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Display Name'**
+  String get displayNameHint;
+
+  /// No description provided for @emailAddressHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Email Address'**
+  String get emailAddressHint;
 
   /// No description provided for @passwordHint.
   ///
@@ -136,29 +220,29 @@ abstract class AppLocalizations {
   /// **'Password'**
   String get passwordHint;
 
-  /// No description provided for @signInButton.
+  /// No description provided for @confirmPasswordHint.
   ///
   /// In en, this message translates to:
-  /// **'Sign In'**
-  String get signInButton;
+  /// **'Confirm Password'**
+  String get confirmPasswordHint;
 
-  /// No description provided for @forgotPassword.
+  /// No description provided for @currentPasswordHint.
   ///
   /// In en, this message translates to:
-  /// **'Forgot password?'**
-  String get forgotPassword;
+  /// **'Current Password'**
+  String get currentPasswordHint;
 
-  /// No description provided for @noAccount.
+  /// No description provided for @newPasswordHint.
   ///
   /// In en, this message translates to:
-  /// **'Don\'t have an account?'**
-  String get noAccount;
+  /// **'New Password'**
+  String get newPasswordHint;
 
-  /// No description provided for @signUp.
+  /// No description provided for @confirmNewPasswordHint.
   ///
   /// In en, this message translates to:
-  /// **'Sign Up'**
-  String get signUp;
+  /// **'Confirm New Password'**
+  String get confirmNewPasswordHint;
 
   /// No description provided for @invalidEmailError.
   ///
@@ -177,6 +261,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Password must be at least 6 characters.'**
   String get passwordTooShortError;
+
+  /// No description provided for @fieldRequiredError.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required.'**
+  String get fieldRequiredError;
+
+  /// No description provided for @passwordMismatchError.
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords do not match.'**
+  String get passwordMismatchError;
 
   /// No description provided for @authInvalidCredentials.
   ///
@@ -208,41 +304,245 @@ abstract class AppLocalizations {
   /// **'Something went wrong. Please try again.'**
   String get authUnknownError;
 
-  /// No description provided for @signInWithGoogle.
+  /// No description provided for @authEmailAlreadyInUse.
   ///
   /// In en, this message translates to:
-  /// **'Sign in with Google'**
-  String get signInWithGoogle;
+  /// **'This email is already registered.'**
+  String get authEmailAlreadyInUse;
 
-  /// No description provided for @signInError.
+  /// No description provided for @authWeakPassword.
   ///
   /// In en, this message translates to:
-  /// **'Sign-in failed. Please try again.'**
-  String get signInError;
+  /// **'Password is too weak.'**
+  String get authWeakPassword;
 
-  /// No description provided for @tabChats.
+  /// No description provided for @chatsTitle.
   ///
   /// In en, this message translates to:
   /// **'Chats'**
-  String get tabChats;
+  String get chatsTitle;
 
-  /// No description provided for @tabFriends.
+  /// No description provided for @searchConversations.
+  ///
+  /// In en, this message translates to:
+  /// **'Search conversations'**
+  String get searchConversations;
+
+  /// No description provided for @filterAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get filterAll;
+
+  /// No description provided for @filterUnread.
+  ///
+  /// In en, this message translates to:
+  /// **'Unread'**
+  String get filterUnread;
+
+  /// No description provided for @filterRequest.
+  ///
+  /// In en, this message translates to:
+  /// **'Requests'**
+  String get filterRequest;
+
+  /// No description provided for @filterActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get filterActive;
+
+  /// No description provided for @newChat.
+  ///
+  /// In en, this message translates to:
+  /// **'New Chat'**
+  String get newChat;
+
+  /// No description provided for @noConversationsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No conversations yet'**
+  String get noConversationsYet;
+
+  /// No description provided for @noConversationsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Start a new conversation with your friends'**
+  String get noConversationsDescription;
+
+  /// No description provided for @viewFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'View Friends'**
+  String get viewFriends;
+
+  /// No description provided for @findPeople.
+  ///
+  /// In en, this message translates to:
+  /// **'Find People'**
+  String get findPeople;
+
+  /// No description provided for @friendsTitle.
   ///
   /// In en, this message translates to:
   /// **'Friends'**
-  String get tabFriends;
+  String get friendsTitle;
 
-  /// No description provided for @tabFindFriends.
+  /// No description provided for @searchFriends.
   ///
   /// In en, this message translates to:
-  /// **'Find Friends'**
-  String get tabFindFriends;
+  /// **'Search friends'**
+  String get searchFriends;
 
-  /// No description provided for @tabProfile.
+  /// No description provided for @online.
   ///
   /// In en, this message translates to:
-  /// **'Profile'**
-  String get tabProfile;
+  /// **'online'**
+  String get online;
+
+  /// No description provided for @offline.
+  ///
+  /// In en, this message translates to:
+  /// **'offline'**
+  String get offline;
+
+  /// No description provided for @lastSeen.
+  ///
+  /// In en, this message translates to:
+  /// **'last seen recently'**
+  String get lastSeen;
+
+  /// No description provided for @addFriend.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Friend'**
+  String get addFriend;
+
+  /// No description provided for @friendRequestsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Friend Requests'**
+  String get friendRequestsTitle;
+
+  /// No description provided for @received.
+  ///
+  /// In en, this message translates to:
+  /// **'Received'**
+  String get received;
+
+  /// No description provided for @sent.
+  ///
+  /// In en, this message translates to:
+  /// **'Sent'**
+  String get sent;
+
+  /// No description provided for @accept.
+  ///
+  /// In en, this message translates to:
+  /// **'Accept'**
+  String get accept;
+
+  /// No description provided for @decline.
+  ///
+  /// In en, this message translates to:
+  /// **'Decline'**
+  String get decline;
+
+  /// No description provided for @pending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get pending;
+
+  /// No description provided for @accepted.
+  ///
+  /// In en, this message translates to:
+  /// **'Accepted'**
+  String get accepted;
+
+  /// No description provided for @requestSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Request Sent'**
+  String get requestSent;
+
+  /// No description provided for @notificationsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notificationsTitle;
+
+  /// No description provided for @markAllRead.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark all as read'**
+  String get markAllRead;
+
+  /// No description provided for @notificationEmptyState.
+  ///
+  /// In en, this message translates to:
+  /// **'No notifications yet'**
+  String get notificationEmptyState;
+
+  /// No description provided for @notificationWelcomeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to AlmaTalk!'**
+  String get notificationWelcomeTitle;
+
+  /// No description provided for @notificationWelcomeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'re glad to have you here. Start chatting with your friends!'**
+  String get notificationWelcomeDesc;
+
+  /// No description provided for @notificationRequestAcceptedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Request Accepted'**
+  String get notificationRequestAcceptedTitle;
+
+  /// No description provided for @notificationNewRequestTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New Friend Request'**
+  String get notificationNewRequestTitle;
+
+  /// No description provided for @notificationReminderTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder'**
+  String get notificationReminderTitle;
+
+  /// No description provided for @notificationReminderDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t forget to check your unread messages.'**
+  String get notificationReminderDesc;
+
+  /// No description provided for @notificationSystemUpdateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'System Update'**
+  String get notificationSystemUpdateTitle;
+
+  /// No description provided for @notificationSystemUpdateDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'A new version of the app is available.'**
+  String get notificationSystemUpdateDesc;
+
+  /// No description provided for @typeMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Type a message...'**
+  String get typeMessage;
+
+  /// No description provided for @send.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get send;
 
   /// No description provided for @profileTitle.
   ///
@@ -250,17 +550,95 @@ abstract class AppLocalizations {
   /// **'Profile'**
   String get profileTitle;
 
-  /// No description provided for @greeting.
+  /// No description provided for @settingsTitle.
   ///
   /// In en, this message translates to:
-  /// **'Hello, {name}!'**
-  String greeting(String name);
+  /// **'Settings'**
+  String get settingsTitle;
 
-  /// No description provided for @email.
+  /// No description provided for @settingsAppSettings.
   ///
   /// In en, this message translates to:
-  /// **'Email'**
-  String get email;
+  /// **'App Settings'**
+  String get settingsAppSettings;
+
+  /// No description provided for @settingsAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get settingsAccount;
+
+  /// No description provided for @settingsThemeMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme Mode'**
+  String get settingsThemeMode;
+
+  /// No description provided for @themeSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get themeSystem;
+
+  /// No description provided for @themeLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get themeLight;
+
+  /// No description provided for @themeDark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get themeDark;
+
+  /// No description provided for @settingsChangeLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get settingsChangeLanguage;
+
+  /// No description provided for @settingsSelectLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Language'**
+  String get settingsSelectLanguage;
+
+  /// No description provided for @settingsSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save Changes'**
+  String get settingsSave;
+
+  /// No description provided for @settingsSignOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Out'**
+  String get settingsSignOut;
+
+  /// No description provided for @settingsDeleteAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Account'**
+  String get settingsDeleteAccount;
+
+  /// No description provided for @changePasswordTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Password'**
+  String get changePasswordTitle;
+
+  /// No description provided for @updatePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Password'**
+  String get updatePassword;
+
+  /// No description provided for @passwordUpdatedSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Password updated successfully'**
+  String get passwordUpdatedSuccess;
 
   /// No description provided for @signOut.
   ///
@@ -268,71 +646,113 @@ abstract class AppLocalizations {
   /// **'Sign Out'**
   String get signOut;
 
-  /// No description provided for @settingsTitle.
+  /// No description provided for @fullName.
   ///
   /// In en, this message translates to:
-  /// **'Settings'**
-  String get settingsTitle;
+  /// **'Full Name'**
+  String get fullName;
 
-  /// No description provided for @settingsThemeMode.
+  /// No description provided for @email.
   ///
   /// In en, this message translates to:
-  /// **'Theme mode'**
-  String get settingsThemeMode;
+  /// **'Email'**
+  String get email;
 
-  /// No description provided for @settingsLanguage.
+  /// No description provided for @username.
   ///
   /// In en, this message translates to:
-  /// **'Language'**
-  String get settingsLanguage;
+  /// **'Username'**
+  String get username;
 
-  /// No description provided for @themeModeSystem.
+  /// No description provided for @personalInfo.
   ///
   /// In en, this message translates to:
-  /// **'System'**
-  String get themeModeSystem;
+  /// **'Personal Information'**
+  String get personalInfo;
 
-  /// No description provided for @themeModeLight.
+  /// No description provided for @findPeopleTitle.
   ///
   /// In en, this message translates to:
-  /// **'Light'**
-  String get themeModeLight;
+  /// **'Find People'**
+  String get findPeopleTitle;
 
-  /// No description provided for @themeModeDark.
+  /// No description provided for @searchUsers.
   ///
   /// In en, this message translates to:
-  /// **'Dark'**
-  String get themeModeDark;
+  /// **'Search users...'**
+  String get searchUsers;
 
-  /// No description provided for @languageEnglish.
+  /// No description provided for @noUsersFound.
   ///
   /// In en, this message translates to:
-  /// **'English'**
-  String get languageEnglish;
+  /// **'No users found'**
+  String get noUsersFound;
 
-  /// No description provided for @languageRussian.
+  /// No description provided for @searchToFindFriends.
   ///
   /// In en, this message translates to:
-  /// **'Russian'**
-  String get languageRussian;
+  /// **'Search for users to add as friends'**
+  String get searchToFindFriends;
 
-  /// No description provided for @languageKazakh.
+  /// No description provided for @declined.
   ///
   /// In en, this message translates to:
-  /// **'Kazakh'**
-  String get languageKazakh;
+  /// **'Declined'**
+  String get declined;
 
-  /// No description provided for @emptyTitle.
+  /// No description provided for @accountTypePremium.
   ///
   /// In en, this message translates to:
-  /// **'Nothing here yet'**
-  String get emptyTitle;
+  /// **'Premium'**
+  String get accountTypePremium;
 
-  /// No description provided for @emptySubtitle.
+  /// No description provided for @accountTypeStandard.
   ///
   /// In en, this message translates to:
-  /// **'Content will appear after actions.'**
-  String get emptySubtitle;
+  /// **'Standard'**
+  String get accountTypeStandard;
+
+  /// No description provided for @noChatsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No chats found'**
+  String get noChatsFound;
+
+  /// No description provided for @failedToLoadChats.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load chats'**
+  String get failedToLoadChats;
+
+  /// No description provided for @failedToLoadMessages.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load messages'**
+  String get failedToLoadMessages;
+
+  /// No description provided for @failedToSearchUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to search users'**
+  String get failedToSearchUsers;
+
+  /// No description provided for @errorPasswordsDoNotMatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords do not match'**
+  String get errorPasswordsDoNotMatch;
+
+  /// No description provided for @notificationRequestAcceptedDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} accepted your friend request.'**
+  String notificationRequestAcceptedDesc(String name);
+
+  /// No description provided for @notificationNewRequestDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'You have a new friend request from {name}.'**
+  String notificationNewRequestDesc(String name);
 }
 
 class _AppLocalizationsDelegate
