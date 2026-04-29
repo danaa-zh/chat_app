@@ -117,6 +117,45 @@ class AppLocalizationsRu extends AppLocalizations {
   String get authWeakPassword => 'Пароль слишком слабый.';
 
   @override
+  String get forgotPasswordSubtitle =>
+      'Введите email для получения ссылки на сброс пароля';
+
+  @override
+  String get emailSentTitle => 'Email отправлен!';
+
+  @override
+  String get emailSentTo => 'Ссылка для сброса пароля отправлена на:';
+
+  @override
+  String get emailSentInstruction =>
+      'Проверьте почту и следуйте инструкциям для сброса пароля';
+
+  @override
+  String get checkSpamNote =>
+      'Не получили письмо? Проверьте папку спам или попробуйте снова';
+
+  @override
+  String get resendEmail => 'Отправить повторно';
+
+  @override
+  String get edit => 'Редактировать';
+
+  @override
+  String get cancel => 'Отмена';
+
+  @override
+  String get onlineLabel => 'В сети';
+
+  @override
+  String get offlineLabel => 'Не в сети';
+
+  @override
+  String get emailCannotBeChanged => 'Email нельзя изменить';
+
+  @override
+  String get photoUpdateComingSoon => 'Обновление фото скоро появится!';
+
+  @override
   String get chatsTitle => 'Чаты';
 
   @override

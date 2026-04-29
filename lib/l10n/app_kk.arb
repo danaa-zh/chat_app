@@ -12,6 +12,7 @@
   "orContinueWith": "немесе арқылы кіру",
   "signInWithGoogle": "Google арқылы кіру",
   "createAccount": "Аккаунт ашу",
+
   "forgotPassword": "Құпия сөзді ұмыттыңыз ба?",
   "sendResetLink": "Сілтемені жіберу",
   "rememberPassword": "Құпия сөз есіңізде ме?",
@@ -36,6 +37,21 @@
   "authUnknownError": "Бірдеңе дұрыс болмады. Қайта көріңіз.",
   "authEmailAlreadyInUse": "Бұл email тіркелген.",
   "authWeakPassword": "Құпия сөз тым әлсіз.",
+  
+  "forgotPasswordSubtitle": "Парольді қалпына келтіру сілтемесін алу үшін email-іңізді енгізіңіз",
+  "emailSentTitle": "Email жіберілді!",
+  "emailSentTo": "Парольді қалпына келтіру сілтемесі жіберілді:",
+  "emailSentInstruction": "Email-ді тексеріп, парольді қалпына келтіру нұсқауларын орындаңыз",
+  "checkSpamNote": "Email келмеді ме? Спам қалтасын тексеріңіз немесе қайта жіберіңіз",
+  "resendEmail": "Email қайта жіберу",
+  
+  "edit": "Өңдеу",
+  "cancel": "Болдырмау",
+  "onlineLabel": "Желіде",
+  "offlineLabel": "Желіде емес",
+  "emailCannotBeChanged": "Email-ді өзгерту мүмкін емес",
+  "photoUpdateComingSoon": "Фотосурет жаңарту жақында!",
+  
   "chatsTitle": "Чаттар",
   "searchConversations": "Әңгімелерді іздеу",
   "filterAll": "Барлығы",

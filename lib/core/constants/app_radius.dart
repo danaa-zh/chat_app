@@ -14,4 +14,6 @@ class AppRadius {
   static const double screen = 32;
   static const double hero = 40;
   static const double jumbo = 52;
+
+  static const double forgotPasswordIconContainerRadius = lg;
 }

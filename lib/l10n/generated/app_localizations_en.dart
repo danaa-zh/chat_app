@@ -117,6 +117,45 @@ class AppLocalizationsEn extends AppLocalizations {
   String get authWeakPassword => 'Password is too weak.';
 
   @override
+  String get forgotPasswordSubtitle =>
+      'Enter your email to receive a password reset link';
+
+  @override
+  String get emailSentTitle => 'Email Sent!';
+
+  @override
+  String get emailSentTo => 'We\'ve sent a password reset link to:';
+
+  @override
+  String get emailSentInstruction =>
+      'Check your email and follow the instructions to reset your password';
+
+  @override
+  String get checkSpamNote =>
+      'Didn\'t receive the email? Check your spam folder or try again';
+
+  @override
+  String get resendEmail => 'Resend Email';
+
+  @override
+  String get edit => 'Edit';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get onlineLabel => 'Online';
+
+  @override
+  String get offlineLabel => 'Offline';
+
+  @override
+  String get emailCannotBeChanged => 'Email can\'t be changed';
+
+  @override
+  String get photoUpdateComingSoon => 'Photo Update Coming Soon!';
+
+  @override
   String get chatsTitle => 'Chats';
 
   @override

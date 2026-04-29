@@ -118,6 +118,45 @@ class AppLocalizationsKk extends AppLocalizations {
   String get authWeakPassword => 'Құпия сөз тым әлсіз.';
 
   @override
+  String get forgotPasswordSubtitle =>
+      'Парольді қалпына келтіру сілтемесін алу үшін email-іңізді енгізіңіз';
+
+  @override
+  String get emailSentTitle => 'Email жіберілді!';
+
+  @override
+  String get emailSentTo => 'Парольді қалпына келтіру сілтемесі жіберілді:';
+
+  @override
+  String get emailSentInstruction =>
+      'Email-ді тексеріп, парольді қалпына келтіру нұсқауларын орындаңыз';
+
+  @override
+  String get checkSpamNote =>
+      'Email келмеді ме? Спам қалтасын тексеріңіз немесе қайта жіберіңіз';
+
+  @override
+  String get resendEmail => 'Email қайта жіберу';
+
+  @override
+  String get edit => 'Өңдеу';
+
+  @override
+  String get cancel => 'Болдырмау';
+
+  @override
+  String get onlineLabel => 'Желіде';
+
+  @override
+  String get offlineLabel => 'Желіде емес';
+
+  @override
+  String get emailCannotBeChanged => 'Email-ді өзгерту мүмкін емес';
+
+  @override
+  String get photoUpdateComingSoon => 'Фотосурет жаңарту жақында!';
+
+  @override
   String get chatsTitle => 'Чаттар';
 
   @override

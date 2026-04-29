@@ -12,6 +12,7 @@
   "orContinueWith": "или войти через",
   "signInWithGoogle": "Войти через Google",
   "createAccount": "Создать аккаунт",
+  
   "forgotPassword": "Забыли пароль?",
   "sendResetLink": "Отправить ссылку",
   "rememberPassword": "Вспомнили пароль?",
@@ -36,6 +37,21 @@
   "authUnknownError": "Что-то пошло не так. Попробуйте еще раз.",
   "authEmailAlreadyInUse": "Этот email уже зарегистрирован.",
   "authWeakPassword": "Пароль слишком слабый.",
+  
+  "forgotPasswordSubtitle": "Введите email для получения ссылки на сброс пароля",
+  "emailSentTitle": "Email отправлен!",
+  "emailSentTo": "Ссылка для сброса пароля отправлена на:",
+  "emailSentInstruction": "Проверьте почту и следуйте инструкциям для сброса пароля",
+  "checkSpamNote": "Не получили письмо? Проверьте папку спам или попробуйте снова",
+  "resendEmail": "Отправить повторно",
+  
+  "edit": "Редактировать",
+  "cancel": "Отмена",
+  "onlineLabel": "В сети",
+  "offlineLabel": "Не в сети",
+  "emailCannotBeChanged": "Email нельзя изменить",
+  "photoUpdateComingSoon": "Обновление фото скоро появится!",
+  
   "chatsTitle": "Чаты",
   "searchConversations": "Поиск бесед",
   "filterAll": "Все",

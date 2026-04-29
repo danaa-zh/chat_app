@@ -316,6 +316,78 @@ abstract class AppLocalizations {
   /// **'Password is too weak.'**
   String get authWeakPassword;
 
+  /// No description provided for @forgotPasswordSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email to receive a password reset link'**
+  String get forgotPasswordSubtitle;
+
+  /// No description provided for @emailSentTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Email Sent!'**
+  String get emailSentTitle;
+
+  /// No description provided for @emailSentTo.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'ve sent a password reset link to:'**
+  String get emailSentTo;
+
+  /// No description provided for @emailSentInstruction.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your email and follow the instructions to reset your password'**
+  String get emailSentInstruction;
+
+  /// No description provided for @checkSpamNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Didn\'t receive the email? Check your spam folder or try again'**
+  String get checkSpamNote;
+
+  /// No description provided for @resendEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend Email'**
+  String get resendEmail;
+
+  /// No description provided for @edit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get edit;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @onlineLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Online'**
+  String get onlineLabel;
+
+  /// No description provided for @offlineLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Offline'**
+  String get offlineLabel;
+
+  /// No description provided for @emailCannotBeChanged.
+  ///
+  /// In en, this message translates to:
+  /// **'Email can\'t be changed'**
+  String get emailCannotBeChanged;
+
+  /// No description provided for @photoUpdateComingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Photo Update Coming Soon!'**
+  String get photoUpdateComingSoon;
+
   /// No description provided for @chatsTitle.
   ///
   /// In en, this message translates to:

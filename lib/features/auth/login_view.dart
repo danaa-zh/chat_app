@@ -1,7 +1,9 @@
-import 'package:chat_app/core/constants/app_constants.dart';
+// import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/constants/app_paddings.dart';
-import 'package:chat_app/core/constants/app_radius.dart';
+// import 'package:chat_app/core/constants/app_radius.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
+import 'package:chat_app/features/widgets/auth_button.dart';
+import 'package:chat_app/features/widgets/google_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:chat_app/core/controllers/auth_controller.dart';
@@ -9,7 +11,7 @@ import 'package:chat_app/core/constants/app_spacings.dart';
 import 'package:chat_app/core/constants/asset_paths.dart';
 import 'package:chat_app/core/extensions/context_extention.dart';
 import 'package:chat_app/core/router/app_routes.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -123,26 +125,18 @@ class _LoginViewState extends State<LoginView> {
                 ),
                 SizedBox(height: AppSpacings.xxl),
 
-                Obx(
-                  () => ElevatedButton(
-                    onPressed: authController.isLoading
-                        ? null
-                        : () {
-                            if (_formKey.currentState!.validate()) {
-                              authController.signInWithEmailAndPassword(
-                                _emailController.text.trim(),
-                                _passwordController.text.trim(),
-                              );
-                            }
-                          },
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(double.infinity, 50),
-                    ),
-                    child: authController.isLoading
-                        ? const CircularProgressIndicator()
-                        : Text(context.loc.signIn),
-                  ),
-                ),
+                Obx(() => AuthButton(
+                  text: context.loc.signIn,
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      authController.signInWithEmailAndPassword(
+                        _emailController.text.trim(),
+                        _passwordController.text.trim(),
+                      );
+                    }
+                  },
+                  isLoading: authController.isLoading,
+                ),),
 
                 SizedBox(height: AppSpacings.lg),
 
@@ -150,26 +144,13 @@ class _LoginViewState extends State<LoginView> {
                   final error = authController.error;
                   if (error.isEmpty) return const SizedBox.shrink();
 
-                  final isNotFound = authController.isUserNotFound;
-
-                  return Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: AppSpacings.md),
-                        child: Text(
-                          isNotFound ? context.loc.userNotFoundError : error,
-                          style: const TextStyle(color: Colors.red),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      if (isNotFound) ...[
-                        SizedBox(height: AppSpacings.sm),
-                        TextButton(
-                          onPressed: () => Get.toNamed(AppRoutes.register),
-                          child: Text(context.loc.goToRegister),
-                        ),
-                      ],
-                    ],
+                  return Padding(
+                    padding: EdgeInsets.only(top: AppSpacings.md),
+                    child: Text(
+                      error,
+                      style: const TextStyle(color: Colors.red),
+                      textAlign: TextAlign.center,
+                    ),
                   );
                 }),
 
@@ -191,32 +172,7 @@ class _LoginViewState extends State<LoginView> {
 
                 SizedBox(height: AppSpacings.xxl),
 
-                Obx(
-                  () => OutlinedButton(
-                    onPressed: authController.isLoading
-                        ? null
-                        : () => authController.signInWithGoogle(),
-                    style: OutlinedButton.styleFrom(
-                      minimumSize: const Size(double.infinity, AppSpacings.fifty),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(AppRadius.lg),
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          AssetPaths.googleIcon,
-                          width: AppConstants.googleIconSize,
-                          height: AppConstants.googleIconSize,
-                        ),
-                        SizedBox(width: AppSpacings.md),
-                        Text(context.loc.signInWithGoogle),
-                      ],
-                    ),
-                  ),
-                ),
+                const GoogleButton(),
 
                 SizedBox(height: AppSpacings.xxl),
 

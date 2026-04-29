@@ -56,7 +56,7 @@ class _SplashViewState extends State<SplashView>
   await Future.delayed(Duration(milliseconds: 500));
 
   if (authController.isAuthenticated) {
-    Get.offAllNamed(AppRoutes.main);
+    Get.offAllNamed(AppRoutes.profile);
   } else {
     Get.offAllNamed(AppRoutes.login);
   }
@@ -72,7 +72,7 @@ class _SplashViewState extends State<SplashView>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.secondary,
+      backgroundColor: AppColors.primary,
       body: Center(
         child: AnimatedBuilder(
           animation: _animationController, 

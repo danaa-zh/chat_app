@@ -12,6 +12,7 @@
   "orContinueWith": "or continue with",
   "signInWithGoogle": "Sign in with Google",
   "createAccount": "Create Account",
+
   "forgotPassword": "Forgot Password?",
   "sendResetLink": "Send Reset Link",
   "rememberPassword": "Remember password?",
@@ -36,6 +37,21 @@
   "authUnknownError": "Something went wrong. Please try again.",
   "authEmailAlreadyInUse": "This email is already registered.",
   "authWeakPassword": "Password is too weak.",
+
+  "forgotPasswordSubtitle": "Enter your email to receive a password reset link",
+  "emailSentTitle": "Email Sent!",
+  "emailSentTo": "We've sent a password reset link to:",
+  "emailSentInstruction": "Check your email and follow the instructions to reset your password",
+  "checkSpamNote": "Didn't receive the email? Check your spam folder or try again",
+  "resendEmail": "Resend Email",
+  
+  "edit": "Edit",
+  "cancel": "Cancel",
+  "onlineLabel": "Online",
+  "offlineLabel": "Offline",
+  "emailCannotBeChanged": "Email can't be changed",
+  "photoUpdateComingSoon": "Photo Update Coming Soon!",
+  
   "chatsTitle": "Chats",
   "searchConversations": "Search conversations",
   "filterAll": "All",

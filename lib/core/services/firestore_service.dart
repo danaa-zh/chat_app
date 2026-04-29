@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class FirestoreService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // Create User
   Future<void> createUser(UserModel user) async {
     try {
       await _firestore.collection('users').doc(user.id).set(user.toMap());
@@ -13,7 +12,6 @@ class FirestoreService {
     }
   }
 
-  // Get User
   Future<UserModel?> getUser(String userId) async {
     try {
       DocumentSnapshot doc = await _firestore
@@ -29,7 +27,6 @@ class FirestoreService {
     }
   }
 
-  // Update User Online Status
   Future<void> updateUserOnlineStatus(String userId, bool isOnline) async {
     try {
       DocumentSnapshot doc = await _firestore
@@ -39,7 +36,7 @@ class FirestoreService {
       if (doc.exists) {
         await _firestore.collection('users').doc(userId).update({
           'isOnline': isOnline,
-          'lastSeen': DateTime.now().millisecondsSinceEpoch,
+          'lastSeen': Timestamp.now(),
         });
       }
     } catch (e) {
@@ -47,12 +44,27 @@ class FirestoreService {
     }
   }
 
-  // Delete User
   Future<void> deleteUser(String userId) async {
     try {
       await _firestore.collection('users').doc(userId).delete();
     } catch (e) {
       throw Exception('Failed To Delete User: ${e.toString()}');
+    }
+  }
+
+  Stream<UserModel?> getUserStream(String userId) {
+    return _firestore
+        .collection('users')
+        .doc(userId)
+        .snapshots()
+        .map((doc) => doc.exists ? UserModel.fromMap(doc.data()!) : null);
+  }
+
+  Future<void> updateUser(UserModel user) async {
+    try {
+      await _firestore.collection('users').doc(user.id).update(user.toMap());
+    } catch (e) {
+      throw Exception('Failed To Update User');
     }
   }
 }

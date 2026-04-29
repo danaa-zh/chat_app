@@ -1,5 +1,9 @@
+import 'package:chat_app/core/controllers/profile_controller.dart';
 import 'package:chat_app/core/router/app_routes.dart';
+import 'package:chat_app/features/auth/forgot_password_view.dart';
 import 'package:chat_app/features/auth/login_view.dart';
+import 'package:chat_app/features/auth/register_view.dart';
+import 'package:chat_app/features/profile/profile_view.dart';
 // import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // import 'package:get/get_instance/get_instance.dart';
@@ -8,22 +12,22 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:chat_app/features/splash/splash_view.dart';
 
 class AppPages {
-  static const initial = AppRoutes.login;
+  static const initial = AppRoutes.splash;
 
   static final routes = [
     GetPage(name: AppRoutes.splash, page: () => const SplashView()),
     GetPage(name: AppRoutes.login, page: () => const LoginView()),
-  //   GetPage(name: AppRoutes.register, page: () => const RegisterView()),
+    GetPage(name: AppRoutes.register, page: () => const RegisterView()),
     
-  //   GetPage(
-  //     name: AppRoutes.forgotPassword,
-  //     page: () => const ForgotPasswordView(),
-  //   ),
+    GetPage(
+      name: AppRoutes.forgotPassword,
+      page: () => const ForgotPasswordView(),
+    ),
     
-  //   GetPage(
-  //     name: AppRoutes.changePassword,
-  //     page: () => const ChangePasswordView(),
-  //   ),
+    // GetPage(
+    //   name: AppRoutes.changePassword,
+    //   page: () => const ChangePasswordView(),
+    // ),
     
   //   GetPage(
   //     name: AppRoutes.home,
@@ -41,13 +45,13 @@ class AppPages {
   //     }),
   //   ),
     
-  //   GetPage(
-  //     name: AppRoutes.profile,
-  //     page: () => const ProfileView(),
-  //     binding: BindingsBuilder(() {
-  //       Get.put(ProfileController());
-  //     }),
-  //   ),
+    GetPage(
+      name: AppRoutes.profile,
+      page: () => const ProfileView(),
+      binding: BindingsBuilder(() {
+        Get.put(ProfileController());
+      }),
+    ),
     
   //   GetPage(
   //     name: AppRoutes.chat,
