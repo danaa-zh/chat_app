@@ -69,7 +69,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get passwordHint => 'Пароль';
 
   @override
-  String get confirmPasswordHint => 'Подтвердите пароль';
+  String get confirmPasswordHint => 'Подтвердите новый пароль';
 
   @override
   String get currentPasswordHint => 'Текущий пароль';
@@ -136,6 +136,22 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get resendEmail => 'Отправить повторно';
+
+  @override
+  String get changePassword => 'Изменить пароль';
+
+  @override
+  String get changePasswordTitle => 'Изменить пароль';
+
+  @override
+  String get changePasswordSubtitle =>
+      'Введите текущий пароль и выберите новый надёжный пароль';
+
+  @override
+  String get updating => 'Обновление...';
+
+  @override
+  String get updatePassword => 'Обновить пароль';
 
   @override
   String get edit => 'Редактировать';
@@ -310,12 +326,6 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get settingsDeleteAccount => 'Удалить аккаунт';
-
-  @override
-  String get changePasswordTitle => 'Изменить пароль';
-
-  @override
-  String get updatePassword => 'Обновить пароль';
 
   @override
   String get passwordUpdatedSuccess => 'Пароль успешно изменен';

@@ -144,10 +144,19 @@ class AuthController extends GetxController {
   }
 
   Future<void> signOut() async {
-    await _runAuthAction(() async {
+    try {
+      _isLoading.value = true;
+      _error.value = '';
       await _authService.signOut();
       _userModel.value = null;
-    }, '');
+      _user.value = null;
+      Get.offAllNamed(AppRoutes.login);
+    } catch (e) {
+      _error.value = e.toString();
+      Get.snackbar('Error', 'Failed To Sign Out');
+    } finally {
+      _isLoading.value = false;
+    }
   }
 
   Future<void> deleteAccount() async {

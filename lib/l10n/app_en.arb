@@ -45,6 +45,15 @@
   "checkSpamNote": "Didn't receive the email? Check your spam folder or try again",
   "resendEmail": "Resend Email",
   
+  "changePassword": "Change Password",
+  "changePasswordTitle": "Update Your Password",
+  "changePasswordSubtitle": "Enter your current password and choose a new secure password",
+  "currentPasswordHint": "Current password",
+  "newPasswordHint": "New password",
+  "confirmPasswordHint": "Confirm new password",
+  "updating": "Updating...",
+  "updatePassword": "Update Password",
+
   "edit": "Edit",
   "cancel": "Cancel",
   "onlineLabel": "Online",

@@ -223,19 +223,19 @@ abstract class AppLocalizations {
   /// No description provided for @confirmPasswordHint.
   ///
   /// In en, this message translates to:
-  /// **'Confirm Password'**
+  /// **'Confirm new password'**
   String get confirmPasswordHint;
 
   /// No description provided for @currentPasswordHint.
   ///
   /// In en, this message translates to:
-  /// **'Current Password'**
+  /// **'Current password'**
   String get currentPasswordHint;
 
   /// No description provided for @newPasswordHint.
   ///
   /// In en, this message translates to:
-  /// **'New Password'**
+  /// **'New password'**
   String get newPasswordHint;
 
   /// No description provided for @confirmNewPasswordHint.
@@ -351,6 +351,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Resend Email'**
   String get resendEmail;
+
+  /// No description provided for @changePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Password'**
+  String get changePassword;
+
+  /// No description provided for @changePasswordTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Password'**
+  String get changePasswordTitle;
+
+  /// No description provided for @changePasswordSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your current password and choose a new secure password'**
+  String get changePasswordSubtitle;
+
+  /// No description provided for @updating.
+  ///
+  /// In en, this message translates to:
+  /// **'Updating...'**
+  String get updating;
+
+  /// No description provided for @updatePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Password'**
+  String get updatePassword;
 
   /// No description provided for @edit.
   ///
@@ -693,18 +723,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Delete Account'**
   String get settingsDeleteAccount;
-
-  /// No description provided for @changePasswordTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Change Password'**
-  String get changePasswordTitle;
-
-  /// No description provided for @updatePassword.
-  ///
-  /// In en, this message translates to:
-  /// **'Update Password'**
-  String get updatePassword;
 
   /// No description provided for @passwordUpdatedSuccess.
   ///

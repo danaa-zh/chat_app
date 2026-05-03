@@ -4,10 +4,10 @@ import 'package:chat_app/core/constants/app_paddings.dart';
 import 'package:chat_app/core/constants/app_spacings.dart';
 import 'package:chat_app/core/extensions/context_extention.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
-import 'package:chat_app/features/profile/widgets/profile_actions_card.dart';
-import 'package:chat_app/features/profile/widgets/profile_avatar.dart';
-import 'package:chat_app/features/profile/widgets/profile_info_header.dart';
-import 'package:chat_app/features/profile/widgets/profile_personal_card.dart';
+import 'package:chat_app/features/profile/view/widgets/profile_actions_card.dart';
+import 'package:chat_app/features/profile/view/widgets/profile_avatar.dart';
+import 'package:chat_app/features/profile/view/widgets/profile_info_header.dart';
+import 'package:chat_app/features/profile/view/widgets/profile_personal_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

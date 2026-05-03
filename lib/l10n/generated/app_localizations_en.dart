@@ -69,13 +69,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get passwordHint => 'Password';
 
   @override
-  String get confirmPasswordHint => 'Confirm Password';
+  String get confirmPasswordHint => 'Confirm new password';
 
   @override
-  String get currentPasswordHint => 'Current Password';
+  String get currentPasswordHint => 'Current password';
 
   @override
-  String get newPasswordHint => 'New Password';
+  String get newPasswordHint => 'New password';
 
   @override
   String get confirmNewPasswordHint => 'Confirm New Password';
@@ -136,6 +136,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get resendEmail => 'Resend Email';
+
+  @override
+  String get changePassword => 'Change Password';
+
+  @override
+  String get changePasswordTitle => 'Change Password';
+
+  @override
+  String get changePasswordSubtitle =>
+      'Enter your current password and choose a new secure password';
+
+  @override
+  String get updating => 'Updating...';
+
+  @override
+  String get updatePassword => 'Update Password';
 
   @override
   String get edit => 'Edit';
@@ -311,12 +327,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsDeleteAccount => 'Delete Account';
-
-  @override
-  String get changePasswordTitle => 'Change Password';
-
-  @override
-  String get updatePassword => 'Update Password';
 
   @override
   String get passwordUpdatedSuccess => 'Password updated successfully';

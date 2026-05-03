@@ -45,6 +45,15 @@
   "checkSpamNote": "Не получили письмо? Проверьте папку спам или попробуйте снова",
   "resendEmail": "Отправить повторно",
   
+  "changePassword": "Изменить пароль",
+  "changePasswordTitle": "Обновите ваш пароль",
+  "changePasswordSubtitle": "Введите текущий пароль и выберите новый надёжный пароль",
+  "currentPasswordHint": "Текущий пароль",
+  "newPasswordHint": "Новый пароль",
+  "confirmPasswordHint": "Подтвердите новый пароль",
+  "updating": "Обновление...",
+  "updatePassword": "Обновить пароль",
+
   "edit": "Редактировать",
   "cancel": "Отмена",
   "onlineLabel": "В сети",

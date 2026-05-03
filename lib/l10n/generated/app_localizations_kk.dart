@@ -69,10 +69,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get passwordHint => 'Құпия сөз';
 
   @override
-  String get confirmPasswordHint => 'Құпия сөзді растаңыз';
+  String get confirmPasswordHint => 'Жаңа құпия сөзді растаңыз';
 
   @override
-  String get currentPasswordHint => 'Қазіргі құпия сөз';
+  String get currentPasswordHint => 'Ағымдағы құпия сөз';
 
   @override
   String get newPasswordHint => 'Жаңа құпия сөз';
@@ -137,6 +137,22 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get resendEmail => 'Email қайта жіберу';
+
+  @override
+  String get changePassword => 'Құпия сөзді өзгерту';
+
+  @override
+  String get changePasswordTitle => 'Құпия сөзді өзгерту';
+
+  @override
+  String get changePasswordSubtitle =>
+      'Ағымдағы құпия сөзді енгізіп, жаңасын таңдаңыз';
+
+  @override
+  String get updating => 'Жаңартылуда...';
+
+  @override
+  String get updatePassword => 'Құпия сөзді жаңарту';
 
   @override
   String get edit => 'Өңдеу';
@@ -311,12 +327,6 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get settingsDeleteAccount => 'Аккаунтты жою';
-
-  @override
-  String get changePasswordTitle => 'Құпия сөзді өзгерту';
-
-  @override
-  String get updatePassword => 'Құпия сөзді жаңарту';
 
   @override
   String get passwordUpdatedSuccess => 'Құпия сөз сәтті өзгертілді';

@@ -45,6 +45,15 @@
   "checkSpamNote": "Email келмеді ме? Спам қалтасын тексеріңіз немесе қайта жіберіңіз",
   "resendEmail": "Email қайта жіберу",
   
+  "changePassword": "Құпия сөзді өзгерту",
+  "changePasswordTitle": "Құпия сөзді жаңарту",
+  "changePasswordSubtitle": "Ағымдағы құпия сөзді енгізіп, жаңасын таңдаңыз",
+  "currentPasswordHint": "Ағымдағы құпия сөз",
+  "newPasswordHint": "Жаңа құпия сөз",
+  "confirmPasswordHint": "Жаңа құпия сөзді растаңыз",
+  "updating": "Жаңартылуда...",
+  "updatePassword": "Құпия сөзді жаңарту",
+
   "edit": "Өңдеу",
   "cancel": "Болдырмау",
   "onlineLabel": "Желіде",
