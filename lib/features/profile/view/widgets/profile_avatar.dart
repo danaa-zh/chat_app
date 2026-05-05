@@ -1,12 +1,13 @@
 // import 'package:chat_app/core/controllers/profile_controller.dart';
 import 'package:chat_app/core/constants/app_constants.dart';
-import 'package:chat_app/core/constants/app_radius.dart';
-import 'package:chat_app/core/constants/app_spacings.dart';
-import 'package:chat_app/core/extensions/context_extention.dart';
+// import 'package:chat_app/core/constants/app_radius.dart';
+// import 'package:chat_app/core/constants/app_spacings.dart';
+// import 'package:chat_app/core/extensions/context_extention.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/data/models/user_model.dart';
+import 'package:chat_app/features/profile/view/widgets/edit_avatar_button.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
 class ProfileAvatar extends StatelessWidget {
   const ProfileAvatar({
@@ -32,7 +33,7 @@ class ProfileAvatar extends StatelessWidget {
                     width: AppConstants.avatarSize,
                     height: AppConstants.avatarSize,
                     fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => _AvatarFallback(user: user),
+                    errorBuilder: (_, _, _) => _AvatarFallback(user: user),
                   ),
                 )
               : _AvatarFallback(user: user),
@@ -41,7 +42,7 @@ class ProfileAvatar extends StatelessWidget {
           Positioned(
             bottom: 0,
             right: 0,
-            child: _EditAvatarButton(context: context),
+            child: EditAvatarButton(context: context),
           ),
       ],
     );
@@ -65,34 +66,3 @@ class _AvatarFallback extends StatelessWidget {
   }
 }
 
-class _EditAvatarButton extends StatelessWidget {
-  const _EditAvatarButton({required this.context});
-
-  final BuildContext context;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.primary,
-        borderRadius: BorderRadius.circular(AppRadius.section),
-        border: Border.all(
-          color: Colors.white,
-          width: AppSpacings.xxxs,
-        ),
-      ),
-      child: IconButton(
-        onPressed: () => Get.snackbar(
-          'Info',
-          context.loc.photoUpdateComingSoon,
-          snackPosition: SnackPosition.BOTTOM,
-        ),
-        icon: const Icon(
-          Icons.camera_alt,
-          size: AppSpacings.section,
-          color: Colors.white,
-        ),
-      ),
-    );
-  }
-}

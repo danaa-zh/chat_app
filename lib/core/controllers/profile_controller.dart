@@ -1,6 +1,7 @@
 import 'package:chat_app/core/controllers/auth_controller.dart';
 import 'package:chat_app/data/models/user_model.dart';
 import 'package:chat_app/core/services/firestore_service.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -78,7 +79,9 @@ class ProfileController extends GetxController {
       Get.snackbar('Success', 'Profile Updated Successfully');
     } catch (e) {
       _error.value = e.toString();
-      print(e.toString());
+      if (kDebugMode) {
+        print(e.toString());
+      }
       Get.snackbar('Error', "Failed To Update Profile");
     } finally {
       _isLoading.value = false;

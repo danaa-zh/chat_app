@@ -13,6 +13,11 @@
   "signInWithGoogle": "Войти через Google",
   "createAccount": "Создать аккаунт",
   
+  "chats": "Чаты",
+  "friends": "Друзья",
+  "profile": "Профиль",
+  "findFriends" : "Найти друзей",
+  
   "forgotPassword": "Забыли пароль?",
   "sendResetLink": "Отправить ссылку",
   "rememberPassword": "Вспомнили пароль?",
@@ -60,8 +65,7 @@
   "offlineLabel": "Не в сети",
   "emailCannotBeChanged": "Email нельзя изменить",
   "photoUpdateComingSoon": "Обновление фото скоро появится!",
-  
-  "chatsTitle": "Чаты",
+
   "searchConversations": "Поиск бесед",
   "filterAll": "Все",
   "filterUnread": "Непрочитанные",
@@ -72,7 +76,7 @@
   "noConversationsDescription": "Начните общение со своими друзьями",
   "viewFriends": "Список друзей",
   "findPeople": "Найти людей",
-  "friendsTitle": "Друзья",
+  
   "searchFriends": "Поиск друзей",
   "online": "в сети",
   "offline": "не в сети",
@@ -99,7 +103,7 @@
   "notificationSystemUpdateDesc": "Доступна новая версия приложения.",
   "typeMessage": "Введите сообщение...",
   "send": "Отправить",
-  "profileTitle": "Профиль",
+
   "settingsTitle": "Настройки",
   "settingsAppSettings": "Настройки приложения",
   "settingsAccount": "Аккаунт",

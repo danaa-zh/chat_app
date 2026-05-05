@@ -12,6 +12,11 @@
   "orContinueWith": "or continue with",
   "signInWithGoogle": "Sign in with Google",
   "createAccount": "Create Account",
+  
+  "chats": "Chats",
+  "profile": "Profile",
+  "friends": "Friends",
+  "findFriends" : "Find Friends",
 
   "forgotPassword": "Forgot Password?",
   "sendResetLink": "Send Reset Link",
@@ -60,8 +65,7 @@
   "offlineLabel": "Offline",
   "emailCannotBeChanged": "Email can't be changed",
   "photoUpdateComingSoon": "Photo Update Coming Soon!",
-  
-  "chatsTitle": "Chats",
+
   "searchConversations": "Search conversations",
   "filterAll": "All",
   "filterUnread": "Unread",
@@ -72,7 +76,7 @@
   "noConversationsDescription": "Start a new conversation with your friends",
   "viewFriends": "View Friends",
   "findPeople": "Find People",
-  "friendsTitle": "Friends",
+
   "searchFriends": "Search friends",
   "online": "online",
   "offline": "offline",
@@ -88,6 +92,7 @@
   "requestSent": "Request Sent",
   "notificationsTitle": "Notifications",
   "markAllRead": "Mark all as read",
+
   "notificationEmptyState": "No notifications yet",
   "notificationWelcomeTitle": "Welcome to AlmaTalk!",
   "notificationWelcomeDesc": "We're glad to have you here. Start chatting with your friends!",
@@ -99,7 +104,7 @@
   "notificationSystemUpdateDesc": "A new version of the app is available.",
   "typeMessage": "Type a message...",
   "send": "Send",
-  "profileTitle": "Profile",
+
   "settingsTitle": "Settings",
   "settingsAppSettings": "App Settings",
   "settingsAccount": "Account",

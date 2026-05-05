@@ -12,6 +12,11 @@
   "orContinueWith": "немесе арқылы кіру",
   "signInWithGoogle": "Google арқылы кіру",
   "createAccount": "Аккаунт ашу",
+  
+  "chats": "Чаттар",
+  "friends": "Достар",
+  "profile": "Профиль",
+  "findFriends" : "Достар табу",
 
   "forgotPassword": "Құпия сөзді ұмыттыңыз ба?",
   "sendResetLink": "Сілтемені жіберу",
@@ -60,8 +65,7 @@
   "offlineLabel": "Желіде емес",
   "emailCannotBeChanged": "Email-ді өзгерту мүмкін емес",
   "photoUpdateComingSoon": "Фотосурет жаңарту жақында!",
-  
-  "chatsTitle": "Чаттар",
+
   "searchConversations": "Әңгімелерді іздеу",
   "filterAll": "Барлығы",
   "filterUnread": "Оқылмағандар",
@@ -72,7 +76,7 @@
   "noConversationsDescription": "Достарыңызбен сөйлесуді бастаңыз",
   "viewFriends": "Достар тізімі",
   "findPeople": "Адамдарды іздеу",
-  "friendsTitle": "Достар",
+  
   "searchFriends": "Достарды іздеу",
   "online": "желіде",
   "offline": "желіде емес",
@@ -99,7 +103,7 @@
   "notificationSystemUpdateDesc": "Қолданбаның жаңа нұсқасы қолжетімді.",
   "typeMessage": "Хабарлама жазыңыз...",
   "send": "Жіберу",
-  "profileTitle": "Профиль",
+
   "settingsTitle": "Баптаулар",
   "settingsAppSettings": "Қолданба баптаулары",
   "settingsAccount": "Аккаунт",

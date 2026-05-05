@@ -172,6 +172,30 @@ abstract class AppLocalizations {
   /// **'Create Account'**
   String get createAccount;
 
+  /// No description provided for @chats.
+  ///
+  /// In en, this message translates to:
+  /// **'Chats'**
+  String get chats;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @friends.
+  ///
+  /// In en, this message translates to:
+  /// **'Friends'**
+  String get friends;
+
+  /// No description provided for @findFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Find Friends'**
+  String get findFriends;
+
   /// No description provided for @forgotPassword.
   ///
   /// In en, this message translates to:
@@ -418,12 +442,6 @@ abstract class AppLocalizations {
   /// **'Photo Update Coming Soon!'**
   String get photoUpdateComingSoon;
 
-  /// No description provided for @chatsTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Chats'**
-  String get chatsTitle;
-
   /// No description provided for @searchConversations.
   ///
   /// In en, this message translates to:
@@ -483,12 +501,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Find People'**
   String get findPeople;
-
-  /// No description provided for @friendsTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Friends'**
-  String get friendsTitle;
 
   /// No description provided for @searchFriends.
   ///
@@ -645,12 +657,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Send'**
   String get send;
-
-  /// No description provided for @profileTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Profile'**
-  String get profileTitle;
 
   /// No description provided for @settingsTitle.
   ///

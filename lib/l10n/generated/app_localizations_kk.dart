@@ -45,6 +45,18 @@ class AppLocalizationsKk extends AppLocalizations {
   String get createAccount => 'Аккаунт ашу';
 
   @override
+  String get chats => 'Чаттар';
+
+  @override
+  String get profile => 'Профиль';
+
+  @override
+  String get friends => 'Достар';
+
+  @override
+  String get findFriends => 'Достар табу';
+
+  @override
   String get forgotPassword => 'Құпия сөзді ұмыттыңыз ба?';
 
   @override
@@ -173,9 +185,6 @@ class AppLocalizationsKk extends AppLocalizations {
   String get photoUpdateComingSoon => 'Фотосурет жаңарту жақында!';
 
   @override
-  String get chatsTitle => 'Чаттар';
-
-  @override
   String get searchConversations => 'Әңгімелерді іздеу';
 
   @override
@@ -204,9 +213,6 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get findPeople => 'Адамдарды іздеу';
-
-  @override
-  String get friendsTitle => 'Достар';
 
   @override
   String get searchFriends => 'Достарды іздеу';
@@ -288,9 +294,6 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get send => 'Жіберу';
-
-  @override
-  String get profileTitle => 'Профиль';
 
   @override
   String get settingsTitle => 'Баптаулар';

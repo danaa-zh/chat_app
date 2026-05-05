@@ -161,32 +161,25 @@ class FirestoreService {
       if (status == FriendRequestStatus.accepted) {
         await createFriendship(request.senderId, request.receiverId);
 
-        await createNotification(
-          NotificationModel(
-            id: DateTime.now().millisecondsSinceEpoch.toString(),
-            userId: request.senderId,
-            title: 'Friend Request Accepted',
-            body: 'Your friend request has been accepted',
-            type: NotificationType.friendRequestAccepted,
-            data: {'userId': request.receiverId},
-            createdAt: DateTime.now(),
-          ),
+        await _notifyUser(
+          userId: request.senderId,
+          title: 'Friend Request Accepted',
+          body: 'Your friend request has been accepted',
+          type: NotificationType.friendRequestAccepted,
+          data: {'userId': request.receiverId},
         );
-      } else if (status == FriendRequestStatus.declined) {
-        await createNotification(
-          NotificationModel(
-            id: DateTime.now().millisecondsSinceEpoch.toString(),
-            userId: request.senderId,
-            title: 'Friend Request Declined',
-            body: 'Your friend request has been declined',
-            type: NotificationType.friendRequestDeclined,
-            data: {'userId': request.receiverId},
-            createdAt: DateTime.now(),
-          ),
+      } else if (status == FriendRequestStatus.rejected) {
+        await _notifyUser(
+          userId: request.senderId,
+          title: 'Friend Request Rejected',
+          body: 'Your friend request has been rejected',
+          type: NotificationType.friendRequestRejected,
+          data: {'userId': request.receiverId},
         );
 
-        await _removeNotificationForCancelledRequest(
+        await deleteNotificationsByTypeAndUser(
           request.receiverId,
+          NotificationType.friendRequest,
           request.senderId,
         );
       }
@@ -340,9 +333,7 @@ class FirestoreService {
           List<FriendshipModel> friendships = [];
 
           for (var doc in snapshot1.docs) {
-            friendships.add(
-              FriendshipModel.fromMap(doc.data() as Map<String, dynamic>),
-            );
+            friendships.add(FriendshipModel.fromMap(doc.data()));
           }
 
           for (var doc in snapshot2.docs) {
@@ -746,5 +737,24 @@ class FirestoreService {
     } catch (e) {
       throw Exception('Failed to delete notification: ${e.toString()}');
     }
+  }
+
+  Future<void> _notifyUser({
+    required String userId,
+    required String title,
+    required String body,
+    required NotificationType type,
+    required Map<String, dynamic> data,
+  }) async {
+    final notification = NotificationModel(
+      id: DateTime.now().millisecondsSinceEpoch.toString(),
+      userId: userId,
+      title: title,
+      body: body,
+      type: type,
+      data: data,
+      createdAt: DateTime.now(),
+    );
+    await createNotification(notification);
   }
 }

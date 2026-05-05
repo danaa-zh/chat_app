@@ -45,6 +45,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get createAccount => 'Create Account';
 
   @override
+  String get chats => 'Chats';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get friends => 'Friends';
+
+  @override
+  String get findFriends => 'Find Friends';
+
+  @override
   String get forgotPassword => 'Forgot Password?';
 
   @override
@@ -172,9 +184,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get photoUpdateComingSoon => 'Photo Update Coming Soon!';
 
   @override
-  String get chatsTitle => 'Chats';
-
-  @override
   String get searchConversations => 'Search conversations';
 
   @override
@@ -204,9 +213,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get findPeople => 'Find People';
-
-  @override
-  String get friendsTitle => 'Friends';
 
   @override
   String get searchFriends => 'Search friends';
@@ -288,9 +294,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get send => 'Send';
-
-  @override
-  String get profileTitle => 'Profile';
 
   @override
   String get settingsTitle => 'Settings';

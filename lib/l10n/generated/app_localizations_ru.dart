@@ -45,6 +45,18 @@ class AppLocalizationsRu extends AppLocalizations {
   String get createAccount => 'Создать аккаунт';
 
   @override
+  String get chats => 'Чаты';
+
+  @override
+  String get profile => 'Профиль';
+
+  @override
+  String get friends => 'Друзья';
+
+  @override
+  String get findFriends => 'Найти друзей';
+
+  @override
   String get forgotPassword => 'Забыли пароль?';
 
   @override
@@ -172,9 +184,6 @@ class AppLocalizationsRu extends AppLocalizations {
   String get photoUpdateComingSoon => 'Обновление фото скоро появится!';
 
   @override
-  String get chatsTitle => 'Чаты';
-
-  @override
   String get searchConversations => 'Поиск бесед';
 
   @override
@@ -203,9 +212,6 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get findPeople => 'Найти людей';
-
-  @override
-  String get friendsTitle => 'Друзья';
 
   @override
   String get searchFriends => 'Поиск друзей';
@@ -287,9 +293,6 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get send => 'Отправить';
-
-  @override
-  String get profileTitle => 'Профиль';
 
   @override
   String get settingsTitle => 'Настройки';

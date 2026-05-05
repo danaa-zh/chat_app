@@ -96,7 +96,7 @@ class AuthController extends GetxController {
 
       if (result != null && result is UserModel) {
         _userModel.value = result;
-        Get.offAllNamed(AppRoutes.main); // navigate after login/register
+        Get.offAllNamed(AppRoutes.main); 
       }
 
       if (successMessage.isNotEmpty) {
