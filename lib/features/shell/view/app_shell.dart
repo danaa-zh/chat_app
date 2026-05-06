@@ -1,5 +1,6 @@
 import 'package:chat_app/core/controllers/main_controller.dart';
-import 'package:chat_app/core/extensions/context_extention.dart';
+import 'package:chat_app/core/extensions/context_extension.dart';
+import 'package:chat_app/features/find_people/view/find_people_view.dart';
 import 'package:chat_app/features/widgets/app_nav_bar.dart';
 import 'package:chat_app/data/models/nav_item_model.dart';
 import 'package:chat_app/features/profile/view/profile_view.dart';
@@ -45,7 +46,7 @@ class AppShell extends GetView<MainController> {
           // UsersListView(),
           Center(child: Text('Chats')),
           Center(child: Text('Friends')),
-          Center(child: Text('Find Friends')),
+          FindPeopleView(),
           ProfileView(),
         ],
       ),

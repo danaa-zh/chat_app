@@ -66,6 +66,24 @@
   "emailCannotBeChanged": "Email can't be changed",
   "photoUpdateComingSoon": "Photo Update Coming Soon!",
 
+  "searchPeople": "Search people",
+  "noResultsFound": "No results found",
+  "noPeopleFound": "No people found",
+  "tryDifferentSearch": "Try a different search term",
+  "allUsersWillAppearHere": "All users will appear here",
+
+  "decline": "Decline",
+  "cancel": "Cancel",
+  "keepRequest": "Keep Request",
+  "cancelRequest": "Cancel Request",
+  "cancelFriendRequestTitle": "Cancel Friend Request",
+  "cancelFriendRequestMessage": "Are you sure you want to cancel the friend request to {name}?",
+  "@cancelFriendRequestMessage": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+
   "searchConversations": "Search conversations",
   "filterAll": "All",
   "filterUnread": "Unread",

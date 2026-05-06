@@ -1,6 +1,6 @@
 import 'package:chat_app/core/constants/app_radius.dart';
 import 'package:chat_app/core/constants/app_spacings.dart';
-import 'package:chat_app/core/extensions/context_extention.dart';
+import 'package:chat_app/core/extensions/context_extension.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';

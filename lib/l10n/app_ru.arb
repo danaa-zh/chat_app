@@ -66,6 +66,24 @@
   "emailCannotBeChanged": "Email нельзя изменить",
   "photoUpdateComingSoon": "Обновление фото скоро появится!",
 
+  "searchPeople": "Поиск друзей",
+  "noResultsFound": "Ничего не найдено",
+  "noPeopleFound": "Пользователи не найдены",
+  "tryDifferentSearch": "Попробуйте другой запрос",
+  "allUsersWillAppearHere": "Здесь появятся все пользователи",
+
+  "decline": "Отклонить",
+  "cancel": "Отмена",
+  "keepRequest": "Оставить",
+  "cancelRequest": "Отменить запрос",
+  "cancelFriendRequestTitle": "Отменить запрос в друзья",
+  "cancelFriendRequestMessage": "Отменить запрос в друзья для {name}?",
+  "@cancelFriendRequestMessage": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+
   "searchConversations": "Поиск бесед",
   "filterAll": "Все",
   "filterUnread": "Непрочитанные",

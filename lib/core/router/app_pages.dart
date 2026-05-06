@@ -1,4 +1,6 @@
 import 'package:chat_app/core/controllers/main_controller.dart';
+import 'package:chat_app/core/controllers/users_list_controller.dart';
+import 'package:chat_app/features/find_people/view/find_people_view.dart';
 import 'package:chat_app/features/main/binding/main_binding.dart';
 import 'package:chat_app/features/main/view/main_view.dart';
 import 'package:chat_app/features/profile/view/change_password_view.dart';
@@ -71,13 +73,13 @@ class AppPages {
     //     }),
     //   ),
 
-    //   GetPage(
-    //     name: AppRoutes.usersList,
-    //     page: () => const UsersListView(),
-    //     binding: BindingsBuilder(() {
-    //       Get.put(UsersListController());
-    //     }),
-    //   ),
+      GetPage(
+        name: AppRoutes.usersList,
+        page: () => const FindPeopleView(),
+        binding: BindingsBuilder(() {
+          Get.put(UsersListController());
+        }),
+      ),
 
     //   GetPage(
     //     name: AppRoutes.friends,

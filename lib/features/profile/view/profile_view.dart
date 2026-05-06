@@ -2,7 +2,7 @@ import 'package:chat_app/core/controllers/profile_controller.dart';
 import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/constants/app_paddings.dart';
 import 'package:chat_app/core/constants/app_spacings.dart';
-import 'package:chat_app/core/extensions/context_extention.dart';
+import 'package:chat_app/core/extensions/context_extension.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/features/profile/view/widgets/profile_actions_card.dart';
 import 'package:chat_app/features/profile/view/widgets/profile_avatar.dart';

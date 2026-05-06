@@ -442,6 +442,66 @@ abstract class AppLocalizations {
   /// **'Photo Update Coming Soon!'**
   String get photoUpdateComingSoon;
 
+  /// No description provided for @searchPeople.
+  ///
+  /// In en, this message translates to:
+  /// **'Search people'**
+  String get searchPeople;
+
+  /// No description provided for @noResultsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No results found'**
+  String get noResultsFound;
+
+  /// No description provided for @noPeopleFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No people found'**
+  String get noPeopleFound;
+
+  /// No description provided for @tryDifferentSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Try a different search term'**
+  String get tryDifferentSearch;
+
+  /// No description provided for @allUsersWillAppearHere.
+  ///
+  /// In en, this message translates to:
+  /// **'All users will appear here'**
+  String get allUsersWillAppearHere;
+
+  /// No description provided for @decline.
+  ///
+  /// In en, this message translates to:
+  /// **'Decline'**
+  String get decline;
+
+  /// No description provided for @keepRequest.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep Request'**
+  String get keepRequest;
+
+  /// No description provided for @cancelRequest.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel Request'**
+  String get cancelRequest;
+
+  /// No description provided for @cancelFriendRequestTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel Friend Request'**
+  String get cancelFriendRequestTitle;
+
+  /// No description provided for @cancelFriendRequestMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to cancel the friend request to {name}?'**
+  String cancelFriendRequestMessage(String name);
+
   /// No description provided for @searchConversations.
   ///
   /// In en, this message translates to:
@@ -555,12 +615,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Accept'**
   String get accept;
-
-  /// No description provided for @decline.
-  ///
-  /// In en, this message translates to:
-  /// **'Decline'**
-  String get decline;
 
   /// No description provided for @pending.
   ///

@@ -66,6 +66,24 @@
   "emailCannotBeChanged": "Email-ді өзгерту мүмкін емес",
   "photoUpdateComingSoon": "Фотосурет жаңарту жақында!",
 
+  "searchPeople": "Достар іздеу",
+  "noResultsFound": "Нәтиже табылмады",
+  "noPeopleFound": "Пайдаланушылар табылмады",
+  "tryDifferentSearch": "Басқа сөз қолданып көріңіз",
+  "allUsersWillAppearHere": "Барлық пайдаланушылар осында көрінеді",
+
+  "decline": "Бас тарту",
+  "cancel": "Болдырмау",
+  "keepRequest": "Қалдыру",
+  "cancelRequest": "Сұранысты болдырмау",
+  "cancelFriendRequestTitle": "Дос қосу сұранысын болдырмау",
+  "cancelFriendRequestMessage": "{name} пайдаланушыға жіберген сұранысты болдырмайсыз ба?",
+  "@cancelFriendRequestMessage": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+
   "searchConversations": "Әңгімелерді іздеу",
   "filterAll": "Барлығы",
   "filterUnread": "Оқылмағандар",

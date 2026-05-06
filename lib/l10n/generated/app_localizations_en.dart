@@ -184,6 +184,38 @@ class AppLocalizationsEn extends AppLocalizations {
   String get photoUpdateComingSoon => 'Photo Update Coming Soon!';
 
   @override
+  String get searchPeople => 'Search people';
+
+  @override
+  String get noResultsFound => 'No results found';
+
+  @override
+  String get noPeopleFound => 'No people found';
+
+  @override
+  String get tryDifferentSearch => 'Try a different search term';
+
+  @override
+  String get allUsersWillAppearHere => 'All users will appear here';
+
+  @override
+  String get decline => 'Decline';
+
+  @override
+  String get keepRequest => 'Keep Request';
+
+  @override
+  String get cancelRequest => 'Cancel Request';
+
+  @override
+  String get cancelFriendRequestTitle => 'Cancel Friend Request';
+
+  @override
+  String cancelFriendRequestMessage(String name) {
+    return 'Are you sure you want to cancel the friend request to $name?';
+  }
+
+  @override
   String get searchConversations => 'Search conversations';
 
   @override
@@ -240,9 +272,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get accept => 'Accept';
-
-  @override
-  String get decline => 'Decline';
 
   @override
   String get pending => 'Pending';

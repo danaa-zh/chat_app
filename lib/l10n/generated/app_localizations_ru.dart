@@ -184,6 +184,38 @@ class AppLocalizationsRu extends AppLocalizations {
   String get photoUpdateComingSoon => 'Обновление фото скоро появится!';
 
   @override
+  String get searchPeople => 'Поиск друзей';
+
+  @override
+  String get noResultsFound => 'Ничего не найдено';
+
+  @override
+  String get noPeopleFound => 'Пользователи не найдены';
+
+  @override
+  String get tryDifferentSearch => 'Попробуйте другой запрос';
+
+  @override
+  String get allUsersWillAppearHere => 'Здесь появятся все пользователи';
+
+  @override
+  String get decline => 'Отклонить';
+
+  @override
+  String get keepRequest => 'Оставить';
+
+  @override
+  String get cancelRequest => 'Отменить запрос';
+
+  @override
+  String get cancelFriendRequestTitle => 'Отменить запрос в друзья';
+
+  @override
+  String cancelFriendRequestMessage(String name) {
+    return 'Отменить запрос в друзья для $name?';
+  }
+
+  @override
   String get searchConversations => 'Поиск бесед';
 
   @override
@@ -239,9 +271,6 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get accept => 'Принять';
-
-  @override
-  String get decline => 'Отклонить';
 
   @override
   String get pending => 'В ожидании';

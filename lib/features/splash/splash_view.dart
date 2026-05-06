@@ -7,7 +7,7 @@ import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/theme/app_text_styles.dart';
 // import 'package:chat_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:chat_app/core/extensions/context_extention.dart';
+import 'package:chat_app/core/extensions/context_extension.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';

@@ -6,7 +6,7 @@ import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/constants/app_radius.dart';
 import 'package:chat_app/core/constants/asset_paths.dart';
 import 'package:chat_app/core/controllers/auth_controller.dart';
-import 'package:chat_app/core/extensions/context_extention.dart';
+import 'package:chat_app/core/extensions/context_extension.dart';
 
 class GoogleButton extends StatelessWidget {
   const GoogleButton({super.key});

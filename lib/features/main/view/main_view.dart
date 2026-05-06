@@ -1,5 +1,6 @@
 import 'package:chat_app/core/controllers/main_controller.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
+import 'package:chat_app/features/find_people/view/find_people_view.dart';
 import 'package:chat_app/features/profile/view/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,7 +20,7 @@ class MainView extends GetView<MainController> {
           // UsersListView(),
           Container(),
           Container(),
-          Container(),
+          FindPeopleView(),
           ProfileView(),
         ],
       ),

@@ -1,7 +1,7 @@
 import 'package:chat_app/core/constants/app_paddings.dart';
 import 'package:chat_app/core/constants/app_radius.dart';
 import 'package:chat_app/core/constants/app_spacings.dart';
-import 'package:chat_app/core/extensions/context_extention.dart';
+import 'package:chat_app/core/extensions/context_extension.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/controllers/change_password_controller.dart';
 import 'package:flutter/material.dart';

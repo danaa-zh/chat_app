@@ -185,6 +185,38 @@ class AppLocalizationsKk extends AppLocalizations {
   String get photoUpdateComingSoon => 'Фотосурет жаңарту жақында!';
 
   @override
+  String get searchPeople => 'Достар іздеу';
+
+  @override
+  String get noResultsFound => 'Нәтиже табылмады';
+
+  @override
+  String get noPeopleFound => 'Пайдаланушылар табылмады';
+
+  @override
+  String get tryDifferentSearch => 'Басқа сөз қолданып көріңіз';
+
+  @override
+  String get allUsersWillAppearHere => 'Барлық пайдаланушылар осында көрінеді';
+
+  @override
+  String get decline => 'Бас тарту';
+
+  @override
+  String get keepRequest => 'Қалдыру';
+
+  @override
+  String get cancelRequest => 'Сұранысты болдырмау';
+
+  @override
+  String get cancelFriendRequestTitle => 'Дос қосу сұранысын болдырмау';
+
+  @override
+  String cancelFriendRequestMessage(String name) {
+    return '$name пайдаланушыға жіберген сұранысты болдырмайсыз ба?';
+  }
+
+  @override
   String get searchConversations => 'Әңгімелерді іздеу';
 
   @override
@@ -240,9 +272,6 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get accept => 'Қабылдау';
-
-  @override
-  String get decline => 'Бас тарту';
 
   @override
   String get pending => 'Күтілуде';

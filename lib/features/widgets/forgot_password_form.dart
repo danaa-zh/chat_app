@@ -1,5 +1,5 @@
 import 'package:chat_app/core/constants/app_spacings.dart';
-import 'package:chat_app/core/extensions/context_extention.dart';
+import 'package:chat_app/core/extensions/context_extension.dart';
 import 'package:chat_app/features/widgets/auth_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

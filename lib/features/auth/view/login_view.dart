@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 import 'package:chat_app/core/controllers/auth_controller.dart';
 import 'package:chat_app/core/constants/app_spacings.dart';
 import 'package:chat_app/core/constants/asset_paths.dart';
-import 'package:chat_app/core/extensions/context_extention.dart';
+import 'package:chat_app/core/extensions/context_extension.dart';
 import 'package:chat_app/core/router/app_routes.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
