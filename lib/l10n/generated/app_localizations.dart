@@ -502,6 +502,132 @@ abstract class AppLocalizations {
   /// **'Are you sure you want to cancel the friend request to {name}?'**
   String cancelFriendRequestMessage(String name);
 
+  /// No description provided for @searchFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Search friends'**
+  String get searchFriends;
+
+  /// No description provided for @noFriendsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No friends found'**
+  String get noFriendsFound;
+
+  /// No description provided for @noFriendsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No friends yet'**
+  String get noFriendsYet;
+
+  /// No description provided for @addFriendsToChat.
+  ///
+  /// In en, this message translates to:
+  /// **'Add friends to start chatting with them'**
+  String get addFriendsToChat;
+
+  /// No description provided for @viewFriendRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'View Friend Requests'**
+  String get viewFriendRequests;
+
+  /// No description provided for @message.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get message;
+
+  /// No description provided for @removeFriend.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove Friend'**
+  String get removeFriend;
+
+  /// No description provided for @blockUser.
+  ///
+  /// In en, this message translates to:
+  /// **'Block User'**
+  String get blockUser;
+
+  /// No description provided for @friendRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Friend Requests'**
+  String get friendRequests;
+
+  /// No description provided for @receivedRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Received ({count})'**
+  String receivedRequests(Object count);
+
+  /// No description provided for @sentRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Sent ({count})'**
+  String sentRequests(Object count);
+
+  /// No description provided for @noFriendRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'No Friend Requests'**
+  String get noFriendRequests;
+
+  /// No description provided for @noFriendRequestsMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'When someone sends you a friend request, it will appear here.'**
+  String get noFriendRequestsMessage;
+
+  /// No description provided for @noSentRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'No Sent Requests'**
+  String get noSentRequests;
+
+  /// No description provided for @noSentRequestsMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Friend requests you send will appear here.'**
+  String get noSentRequestsMessage;
+
+  /// No description provided for @deleteChat.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Chat'**
+  String get deleteChat;
+
+  /// No description provided for @deleteChatSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'This will delete the chat for you only'**
+  String get deleteChatSubtitle;
+
+  /// No description provided for @viewProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'View Profile'**
+  String get viewProfile;
+
+  /// No description provided for @noMessagesYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No messages yet'**
+  String get noMessagesYet;
+
+  /// No description provided for @seen.
+  ///
+  /// In en, this message translates to:
+  /// **'Seen'**
+  String get seen;
+
+  /// No description provided for @delivered.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivered'**
+  String get delivered;
+
   /// No description provided for @searchConversations.
   ///
   /// In en, this message translates to:
@@ -561,12 +687,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Find People'**
   String get findPeople;
-
-  /// No description provided for @searchFriends.
-  ///
-  /// In en, this message translates to:
-  /// **'Search friends'**
-  String get searchFriends;
 
   /// No description provided for @online.
   ///

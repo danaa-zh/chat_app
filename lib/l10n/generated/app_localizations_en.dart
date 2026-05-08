@@ -216,6 +216,75 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get searchFriends => 'Search friends';
+
+  @override
+  String get noFriendsFound => 'No friends found';
+
+  @override
+  String get noFriendsYet => 'No friends yet';
+
+  @override
+  String get addFriendsToChat => 'Add friends to start chatting with them';
+
+  @override
+  String get viewFriendRequests => 'View Friend Requests';
+
+  @override
+  String get message => 'Message';
+
+  @override
+  String get removeFriend => 'Remove Friend';
+
+  @override
+  String get blockUser => 'Block User';
+
+  @override
+  String get friendRequests => 'Friend Requests';
+
+  @override
+  String receivedRequests(Object count) {
+    return 'Received ($count)';
+  }
+
+  @override
+  String sentRequests(Object count) {
+    return 'Sent ($count)';
+  }
+
+  @override
+  String get noFriendRequests => 'No Friend Requests';
+
+  @override
+  String get noFriendRequestsMessage =>
+      'When someone sends you a friend request, it will appear here.';
+
+  @override
+  String get noSentRequests => 'No Sent Requests';
+
+  @override
+  String get noSentRequestsMessage =>
+      'Friend requests you send will appear here.';
+
+  @override
+  String get deleteChat => 'Delete Chat';
+
+  @override
+  String get deleteChatSubtitle => 'This will delete the chat for you only';
+
+  @override
+  String get viewProfile => 'View Profile';
+
+  @override
+  String get noMessagesYet => 'No messages yet';
+
+  @override
+  String get seen => 'Seen';
+
+  @override
+  String get delivered => 'Delivered';
+
+  @override
   String get searchConversations => 'Search conversations';
 
   @override
@@ -245,9 +314,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get findPeople => 'Find People';
-
-  @override
-  String get searchFriends => 'Search friends';
 
   @override
   String get online => 'online';

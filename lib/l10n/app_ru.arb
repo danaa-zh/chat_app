@@ -84,6 +84,31 @@
     }
   },
 
+  "searchFriends": "Поиск друзей",
+  "noFriendsFound": "Друзья не найдены",
+  "noFriendsYet": "Пока нет друзей",
+  "addFriendsToChat": "Добавьте друзей, чтобы начать общение",
+  "viewFriendRequests": "Запросы в друзья",
+
+  "message": "Написать",
+  "removeFriend": "Удалить из друзей",
+  "blockUser": "Заблокировать",
+
+  "friendRequests": "Запросы в друзья",
+  "receivedRequests": "Входящие ({count})",
+  "sentRequests": "Исходящие ({count})",
+  "noFriendRequests": "Нет запросов в друзья",
+  "noFriendRequestsMessage": "Когда кто-то отправит вам запрос в друзья, он появится здесь.",
+  "noSentRequests": "Нет отправленных запросов",
+  "noSentRequestsMessage": "Отправленные вами запросы в друзья будут отображаться здесь.",
+
+  "deleteChat": "Удалить чат",
+  "deleteChatSubtitle": "Это удалит чат только для вас",
+  "viewProfile": "Посмотреть профиль",
+  "noMessagesYet": "Сообщений пока нет",
+  "seen": "Просмотрено",
+  "delivered": "Доставлено",
+
   "searchConversations": "Поиск бесед",
   "filterAll": "Все",
   "filterUnread": "Непрочитанные",

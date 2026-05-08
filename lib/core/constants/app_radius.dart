@@ -1,5 +1,6 @@
 class AppRadius {
-    static const double zero = 0;
+  static const double zero = 0;
+  static const double xxxs = 2;
   static const double xxs = 4;
   static const double xs = 6;
   static const double sm = 8;
@@ -13,7 +14,9 @@ class AppRadius {
   static const double blockLg = 28;
   static const double screen = 32;
   static const double hero = 40;
+  static const double fifty = 50;
   static const double jumbo = 52;
+  static const double full = 9999;
 
   static const double forgotPasswordIconContainerRadius = lg;
 }

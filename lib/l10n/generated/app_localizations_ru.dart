@@ -216,6 +216,75 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
+  String get searchFriends => 'Поиск друзей';
+
+  @override
+  String get noFriendsFound => 'Друзья не найдены';
+
+  @override
+  String get noFriendsYet => 'Пока нет друзей';
+
+  @override
+  String get addFriendsToChat => 'Добавьте друзей, чтобы начать общение';
+
+  @override
+  String get viewFriendRequests => 'Запросы в друзья';
+
+  @override
+  String get message => 'Написать';
+
+  @override
+  String get removeFriend => 'Удалить из друзей';
+
+  @override
+  String get blockUser => 'Заблокировать';
+
+  @override
+  String get friendRequests => 'Запросы в друзья';
+
+  @override
+  String receivedRequests(Object count) {
+    return 'Входящие ($count)';
+  }
+
+  @override
+  String sentRequests(Object count) {
+    return 'Исходящие ($count)';
+  }
+
+  @override
+  String get noFriendRequests => 'Нет запросов в друзья';
+
+  @override
+  String get noFriendRequestsMessage =>
+      'Когда кто-то отправит вам запрос в друзья, он появится здесь.';
+
+  @override
+  String get noSentRequests => 'Нет отправленных запросов';
+
+  @override
+  String get noSentRequestsMessage =>
+      'Отправленные вами запросы в друзья будут отображаться здесь.';
+
+  @override
+  String get deleteChat => 'Удалить чат';
+
+  @override
+  String get deleteChatSubtitle => 'Это удалит чат только для вас';
+
+  @override
+  String get viewProfile => 'Посмотреть профиль';
+
+  @override
+  String get noMessagesYet => 'Сообщений пока нет';
+
+  @override
+  String get seen => 'Просмотрено';
+
+  @override
+  String get delivered => 'Доставлено';
+
+  @override
   String get searchConversations => 'Поиск бесед';
 
   @override
@@ -244,9 +313,6 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get findPeople => 'Найти людей';
-
-  @override
-  String get searchFriends => 'Поиск друзей';
 
   @override
   String get online => 'в сети';

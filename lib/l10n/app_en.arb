@@ -84,6 +84,32 @@
     }
   },
 
+  "searchFriends": "Search friends",
+  "noFriendsFound": "No friends found",
+  "noFriendsYet": "No friends yet",
+  "addFriendsToChat": "Add friends to start chatting with them",
+  "viewFriendRequests": "View Friend Requests",
+
+  "message": "Message",
+  "removeFriend": "Remove Friend",
+  "blockUser": "Block User",
+
+  "friendRequests": "Friend Requests",
+  "receivedRequests": "Received ({count})",
+  "sentRequests": "Sent ({count})",
+  "noFriendRequests": "No Friend Requests",
+  "noFriendRequestsMessage": "When someone sends you a friend request, it will appear here.",
+  "noSentRequests": "No Sent Requests",
+  "noSentRequestsMessage": "Friend requests you send will appear here.",
+
+  "deleteChat": "Delete Chat",
+  "deleteChatSubtitle": "This will delete the chat for you only",
+  "viewProfile": "View Profile",
+  "noMessagesYet": "No messages yet",
+  "seen": "Seen",
+  "delivered": "Delivered",
+
+
   "searchConversations": "Search conversations",
   "filterAll": "All",
   "filterUnread": "Unread",

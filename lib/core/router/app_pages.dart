@@ -1,6 +1,10 @@
+import 'package:chat_app/core/controllers/friend_requests_controller.dart';
+import 'package:chat_app/core/controllers/friends_controller.dart';
 import 'package:chat_app/core/controllers/main_controller.dart';
 import 'package:chat_app/core/controllers/users_list_controller.dart';
 import 'package:chat_app/features/find_people/view/find_people_view.dart';
+import 'package:chat_app/features/friend_requests/view/friend_requests_view.dart';
+import 'package:chat_app/features/friends/view/friends_view.dart';
 import 'package:chat_app/features/main/binding/main_binding.dart';
 import 'package:chat_app/features/main/view/main_view.dart';
 import 'package:chat_app/features/profile/view/change_password_view.dart';
@@ -11,10 +15,7 @@ import 'package:chat_app/features/auth/view/login_view.dart';
 import 'package:chat_app/features/auth/view/register_view.dart';
 import 'package:chat_app/features/profile/view/profile_view.dart';
 import 'package:chat_app/features/shell/view/app_shell.dart';
-// import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-// import 'package:get/get_instance/get_instance.dart';
-// import 'package:get/get_navigation/get_navigation.dart';
 
 import 'package:chat_app/features/splash/splash_view.dart';
 
@@ -81,21 +82,21 @@ class AppPages {
         }),
       ),
 
-    //   GetPage(
-    //     name: AppRoutes.friends,
-    //     page: () => const FriendsView(),
-    //     binding: BindingsBuilder(() {
-    //       Get.put(FriendsController());
-    //     }),
-    //   ),
+      GetPage(
+        name: AppRoutes.friends,
+        page: () => const FriendsView(),
+        binding: BindingsBuilder(() {
+          Get.put(FriendsController());
+        }),
+      ),
 
-    //   GetPage(
-    //     name: AppRoutes.friendRequests,
-    //     page: () => const FriendRequestsView(),
-    //     binding: BindingsBuilder(() {
-    //       Get.put(FriendRequestsController());
-    //     }),
-    //   ),
+      GetPage(
+        name: AppRoutes.friendRequests,
+        page: () => const FriendRequestsView(),
+        binding: BindingsBuilder(() {
+          Get.put(FriendRequestsController());
+        }),
+      ),
 
     //   GetPage(
     //     name: AppRoutes.notifications,

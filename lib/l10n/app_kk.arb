@@ -84,6 +84,32 @@
     }
   },
 
+  "searchFriends": "Дос іздеу",
+  "noFriendsFound": "Достар табылмады",
+  "noFriendsYet": "Әлі дос жоқ",
+  "addFriendsToChat": "Сөйлесу үшін дос қосыңыз",
+  "viewFriendRequests": "Дос қосу сұраныстары",
+
+  "message": "Хабар жіберу",
+  "removeFriend": "Достықтан шығару",
+  "blockUser": "Бұғаттау",
+
+
+  "friendRequests": "Достық сұранымдары",
+  "receivedRequests": "Келіп түскендер ({count})",
+  "sentRequests": "Жіберілгендер ({count})",
+  "noFriendRequests": "Достық сұранымдары жоқ",
+  "noFriendRequestsMessage": "Егер біреу сізге достық сұраным жіберсе, ол осында пайда болады.",
+  "noSentRequests": "Жіберілген сұранымдар жоқ",
+  "noSentRequestsMessage": "Сіз жіберген достық сұранымдары осында көрсетіледі.",
+
+  "deleteChat": "Чатты жою",
+  "deleteChatSubtitle": "Бұл чат тек сіз үшін жойылады",
+  "viewProfile": "Профильді көру",
+  "noMessagesYet": "Әзірге хабарламалар жоқ",
+  "seen": "Көрілді",
+  "delivered": "Жеткізілді",
+
   "searchConversations": "Әңгімелерді іздеу",
   "filterAll": "Барлығы",
   "filterUnread": "Оқылмағандар",

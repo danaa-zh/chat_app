@@ -19,9 +19,10 @@ class ProfileView extends GetView<ProfileController> {
     return Scaffold(
       appBar: AppBar(
         title: Text(context.loc.profile),
-        leading: IconButton(
-          onPressed: () => Get.back(),
-          icon: const Icon(Icons.arrow_back),
+        leading: Icon(
+          // onPressed: () => Get.back(),
+          Icons.apple,
+          color: Colors.transparent,
         ),
         actions: [
           Obx(

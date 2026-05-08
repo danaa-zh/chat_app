@@ -217,6 +217,75 @@ class AppLocalizationsKk extends AppLocalizations {
   }
 
   @override
+  String get searchFriends => 'Достарды іздеу';
+
+  @override
+  String get noFriendsFound => 'Достар табылмады';
+
+  @override
+  String get noFriendsYet => 'Әлі дос жоқ';
+
+  @override
+  String get addFriendsToChat => 'Сөйлесу үшін дос қосыңыз';
+
+  @override
+  String get viewFriendRequests => 'Дос қосу сұраныстары';
+
+  @override
+  String get message => 'Хабар жіберу';
+
+  @override
+  String get removeFriend => 'Достықтан шығару';
+
+  @override
+  String get blockUser => 'Бұғаттау';
+
+  @override
+  String get friendRequests => 'Достық сұранымдары';
+
+  @override
+  String receivedRequests(Object count) {
+    return 'Келіп түскендер ($count)';
+  }
+
+  @override
+  String sentRequests(Object count) {
+    return 'Жіберілгендер ($count)';
+  }
+
+  @override
+  String get noFriendRequests => 'Достық сұранымдары жоқ';
+
+  @override
+  String get noFriendRequestsMessage =>
+      'Егер біреу сізге достық сұраным жіберсе, ол осында пайда болады.';
+
+  @override
+  String get noSentRequests => 'Жіберілген сұранымдар жоқ';
+
+  @override
+  String get noSentRequestsMessage =>
+      'Сіз жіберген достық сұранымдары осында көрсетіледі.';
+
+  @override
+  String get deleteChat => 'Чатты жою';
+
+  @override
+  String get deleteChatSubtitle => 'Бұл чат тек сіз үшін жойылады';
+
+  @override
+  String get viewProfile => 'Профильді көру';
+
+  @override
+  String get noMessagesYet => 'Әзірге хабарламалар жоқ';
+
+  @override
+  String get seen => 'Көрілді';
+
+  @override
+  String get delivered => 'Жеткізілді';
+
+  @override
   String get searchConversations => 'Әңгімелерді іздеу';
 
   @override
@@ -245,9 +314,6 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get findPeople => 'Адамдарды іздеу';
-
-  @override
-  String get searchFriends => 'Достарды іздеу';
 
   @override
   String get online => 'желіде';
