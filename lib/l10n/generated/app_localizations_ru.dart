@@ -285,7 +285,82 @@ class AppLocalizationsRu extends AppLocalizations {
   String get delivered => 'Доставлено';
 
   @override
+  String get messages => 'Сообщения';
+
+  @override
+  String get searchResults => 'Результаты поиска';
+
+  @override
   String get searchConversations => 'Поиск бесед';
+
+  @override
+  String foundResults(Object count) {
+    return 'Найдено $count результат(ов)';
+  }
+
+  @override
+  String get clear => 'Очистить';
+
+  @override
+  String allChats(Object count) {
+    return 'Все ($count)';
+  }
+
+  @override
+  String recentChats(Object count) {
+    return 'Недавние ($count)';
+  }
+
+  @override
+  String activeChats(Object count) {
+    return 'Активные ($count)';
+  }
+
+  @override
+  String unreadChats(Object count) {
+    return 'Непрочитанные ($count)';
+  }
+
+  @override
+  String get recentChatsHeader => 'Недавние чаты';
+
+  @override
+  String get unreadMessagesHeader => 'Непрочитанные сообщения';
+
+  @override
+  String get recentMessagesHeader => 'Недавние сообщения';
+
+  @override
+  String get activeMessagesHeader => 'Активные сообщения';
+
+  @override
+  String get clearFilter => 'Сбросить фильтр';
+
+  @override
+  String get noConversationsYet => 'Нет активных чатов';
+
+  @override
+  String get connectWithFriends =>
+      'Общайтесь с друзьями и начинайте интересные беседы';
+
+  @override
+  String get findPeople => 'Найти людей';
+
+  @override
+  String get viewFriends => 'Список друзей';
+
+  @override
+  String get newChat => 'Новый чат';
+
+  @override
+  String noResultsFor(Object query) {
+    return 'Нет результатов для \"$query\"';
+  }
+
+  @override
+  String noFilterResults(Object filter) {
+    return 'Нет $filter бесед';
+  }
 
   @override
   String get filterAll => 'Все';
@@ -300,19 +375,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get filterActive => 'Активные';
 
   @override
-  String get newChat => 'Новый чат';
-
-  @override
-  String get noConversationsYet => 'Нет активных чатов';
-
-  @override
   String get noConversationsDescription => 'Начните общение со своими друзьями';
-
-  @override
-  String get viewFriends => 'Список друзей';
-
-  @override
-  String get findPeople => 'Найти людей';
 
   @override
   String get online => 'в сети';

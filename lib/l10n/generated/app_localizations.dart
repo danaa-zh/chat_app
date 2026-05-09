@@ -628,11 +628,131 @@ abstract class AppLocalizations {
   /// **'Delivered'**
   String get delivered;
 
+  /// No description provided for @messages.
+  ///
+  /// In en, this message translates to:
+  /// **'Messages'**
+  String get messages;
+
+  /// No description provided for @searchResults.
+  ///
+  /// In en, this message translates to:
+  /// **'Search Results'**
+  String get searchResults;
+
   /// No description provided for @searchConversations.
   ///
   /// In en, this message translates to:
   /// **'Search conversations'**
   String get searchConversations;
+
+  /// No description provided for @foundResults.
+  ///
+  /// In en, this message translates to:
+  /// **'Found {count} result(s)'**
+  String foundResults(Object count);
+
+  /// No description provided for @clear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clear;
+
+  /// No description provided for @allChats.
+  ///
+  /// In en, this message translates to:
+  /// **'All ({count})'**
+  String allChats(Object count);
+
+  /// No description provided for @recentChats.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent ({count})'**
+  String recentChats(Object count);
+
+  /// No description provided for @activeChats.
+  ///
+  /// In en, this message translates to:
+  /// **'Active ({count})'**
+  String activeChats(Object count);
+
+  /// No description provided for @unreadChats.
+  ///
+  /// In en, this message translates to:
+  /// **'Unread ({count})'**
+  String unreadChats(Object count);
+
+  /// No description provided for @recentChatsHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Chats'**
+  String get recentChatsHeader;
+
+  /// No description provided for @unreadMessagesHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Unread Messages'**
+  String get unreadMessagesHeader;
+
+  /// No description provided for @recentMessagesHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent Messages'**
+  String get recentMessagesHeader;
+
+  /// No description provided for @activeMessagesHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Active Messages'**
+  String get activeMessagesHeader;
+
+  /// No description provided for @clearFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear Filter'**
+  String get clearFilter;
+
+  /// No description provided for @noConversationsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No conversations yet'**
+  String get noConversationsYet;
+
+  /// No description provided for @connectWithFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect with friends and start meaningful conversations'**
+  String get connectWithFriends;
+
+  /// No description provided for @findPeople.
+  ///
+  /// In en, this message translates to:
+  /// **'Find People'**
+  String get findPeople;
+
+  /// No description provided for @viewFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'View Friends'**
+  String get viewFriends;
+
+  /// No description provided for @newChat.
+  ///
+  /// In en, this message translates to:
+  /// **'New Chat'**
+  String get newChat;
+
+  /// No description provided for @noResultsFor.
+  ///
+  /// In en, this message translates to:
+  /// **'No results for \"{query}\"'**
+  String noResultsFor(Object query);
+
+  /// No description provided for @noFilterResults.
+  ///
+  /// In en, this message translates to:
+  /// **'No {filter} conversations'**
+  String noFilterResults(Object filter);
 
   /// No description provided for @filterAll.
   ///
@@ -658,35 +778,11 @@ abstract class AppLocalizations {
   /// **'Active'**
   String get filterActive;
 
-  /// No description provided for @newChat.
-  ///
-  /// In en, this message translates to:
-  /// **'New Chat'**
-  String get newChat;
-
-  /// No description provided for @noConversationsYet.
-  ///
-  /// In en, this message translates to:
-  /// **'No conversations yet'**
-  String get noConversationsYet;
-
   /// No description provided for @noConversationsDescription.
   ///
   /// In en, this message translates to:
   /// **'Start a new conversation with your friends'**
   String get noConversationsDescription;
-
-  /// No description provided for @viewFriends.
-  ///
-  /// In en, this message translates to:
-  /// **'View Friends'**
-  String get viewFriends;
-
-  /// No description provided for @findPeople.
-  ///
-  /// In en, this message translates to:
-  /// **'Find People'**
-  String get findPeople;
 
   /// No description provided for @online.
   ///

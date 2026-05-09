@@ -285,7 +285,82 @@ class AppLocalizationsEn extends AppLocalizations {
   String get delivered => 'Delivered';
 
   @override
+  String get messages => 'Messages';
+
+  @override
+  String get searchResults => 'Search Results';
+
+  @override
   String get searchConversations => 'Search conversations';
+
+  @override
+  String foundResults(Object count) {
+    return 'Found $count result(s)';
+  }
+
+  @override
+  String get clear => 'Clear';
+
+  @override
+  String allChats(Object count) {
+    return 'All ($count)';
+  }
+
+  @override
+  String recentChats(Object count) {
+    return 'Recent ($count)';
+  }
+
+  @override
+  String activeChats(Object count) {
+    return 'Active ($count)';
+  }
+
+  @override
+  String unreadChats(Object count) {
+    return 'Unread ($count)';
+  }
+
+  @override
+  String get recentChatsHeader => 'Recent Chats';
+
+  @override
+  String get unreadMessagesHeader => 'Unread Messages';
+
+  @override
+  String get recentMessagesHeader => 'Recent Messages';
+
+  @override
+  String get activeMessagesHeader => 'Active Messages';
+
+  @override
+  String get clearFilter => 'Clear Filter';
+
+  @override
+  String get noConversationsYet => 'No conversations yet';
+
+  @override
+  String get connectWithFriends =>
+      'Connect with friends and start meaningful conversations';
+
+  @override
+  String get findPeople => 'Find People';
+
+  @override
+  String get viewFriends => 'View Friends';
+
+  @override
+  String get newChat => 'New Chat';
+
+  @override
+  String noResultsFor(Object query) {
+    return 'No results for \"$query\"';
+  }
+
+  @override
+  String noFilterResults(Object filter) {
+    return 'No $filter conversations';
+  }
 
   @override
   String get filterAll => 'All';
@@ -300,20 +375,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get filterActive => 'Active';
 
   @override
-  String get newChat => 'New Chat';
-
-  @override
-  String get noConversationsYet => 'No conversations yet';
-
-  @override
   String get noConversationsDescription =>
       'Start a new conversation with your friends';
-
-  @override
-  String get viewFriends => 'View Friends';
-
-  @override
-  String get findPeople => 'Find People';
 
   @override
   String get online => 'online';

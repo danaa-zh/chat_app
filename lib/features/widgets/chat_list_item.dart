@@ -245,7 +245,7 @@ class _ChatInfo extends StatelessWidget {
         if (isOwnMessage) ...[
           const SizedBox(height: AppSpacings.xxs),
           Text(
-            _getSeenStatusText(),
+            _getSeenStatusText(context),
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
                   color: _getSeenStatusColor(),
                   fontSize: 11,
@@ -266,7 +266,7 @@ class _ChatInfo extends StatelessWidget {
     return chat.isMessageSeen(currentUserId, otherUserId) ? AppColors.primary : AppColors.textSecondary;
   }
 
-  String _getSeenStatusText() {
+  String _getSeenStatusText(dynamic context) {
     final otherUserId = chat.getOtherParticipant(currentUserId);
     return chat.isMessageSeen(currentUserId, otherUserId) ? context.loc.seen : context.loc.delivered;
   }

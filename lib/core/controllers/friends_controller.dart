@@ -98,7 +98,7 @@ class FriendsController extends GetxController {
     } else {
       _filteredFriends.value = _friends.where((friend) {
         return friend.displayName.toLowerCase().contains(query) ||
-            friend.email!.toLowerCase().contains(query);
+            friend.email.toLowerCase().contains(query);
       }).toList();
     }
   }

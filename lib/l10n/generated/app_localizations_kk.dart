@@ -286,7 +286,82 @@ class AppLocalizationsKk extends AppLocalizations {
   String get delivered => 'Жеткізілді';
 
   @override
+  String get messages => 'Хабарламалар';
+
+  @override
+  String get searchResults => 'Іздеу нәтижелері';
+
+  @override
   String get searchConversations => 'Әңгімелерді іздеу';
+
+  @override
+  String foundResults(Object count) {
+    return '$count нәтиже табылды';
+  }
+
+  @override
+  String get clear => 'Тазалау';
+
+  @override
+  String allChats(Object count) {
+    return 'Барлығы ($count)';
+  }
+
+  @override
+  String recentChats(Object count) {
+    return 'Жақында ($count)';
+  }
+
+  @override
+  String activeChats(Object count) {
+    return 'Белсенді ($count)';
+  }
+
+  @override
+  String unreadChats(Object count) {
+    return 'Оқылмаған ($count)';
+  }
+
+  @override
+  String get recentChatsHeader => 'Жақында сөйлесулер';
+
+  @override
+  String get unreadMessagesHeader => 'Оқылмаған хабарламалар';
+
+  @override
+  String get recentMessagesHeader => 'Жақында хабарламалар';
+
+  @override
+  String get activeMessagesHeader => 'Белсенді хабарламалар';
+
+  @override
+  String get clearFilter => 'Фильтрді тазалау';
+
+  @override
+  String get noConversationsYet => 'Белсенді чаттар жоқ';
+
+  @override
+  String get connectWithFriends =>
+      'Достарыңызбен байланысып, мәнді сөйлесулерді бастаңыз';
+
+  @override
+  String get findPeople => 'Адамдарды іздеу';
+
+  @override
+  String get viewFriends => 'Достар тізімі';
+
+  @override
+  String get newChat => 'Жаңа чат';
+
+  @override
+  String noResultsFor(Object query) {
+    return '\"$query\" бойынша нәтиже жоқ';
+  }
+
+  @override
+  String noFilterResults(Object filter) {
+    return '$filter сөйлесулер жоқ';
+  }
 
   @override
   String get filterAll => 'Барлығы';
@@ -301,19 +376,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get filterActive => 'Белсенділер';
 
   @override
-  String get newChat => 'Жаңа чат';
-
-  @override
-  String get noConversationsYet => 'Белсенді чаттар жоқ';
-
-  @override
   String get noConversationsDescription => 'Достарыңызбен сөйлесуді бастаңыз';
-
-  @override
-  String get viewFriends => 'Достар тізімі';
-
-  @override
-  String get findPeople => 'Адамдарды іздеу';
 
   @override
   String get online => 'желіде';
