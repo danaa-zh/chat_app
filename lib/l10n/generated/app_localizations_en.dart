@@ -412,10 +412,17 @@ class AppLocalizationsEn extends AppLocalizations {
   String get requestSent => 'Request Sent';
 
   @override
-  String get notificationsTitle => 'Notifications';
+  String get notifications => 'Notifications';
 
   @override
   String get markAllRead => 'Mark all as read';
+
+  @override
+  String get noNotifications => 'No notifications';
+
+  @override
+  String get notificationsEmptyMessage =>
+      'When you receive friend requests, messages, or other updates, they will appear here.';
 
   @override
   String get notificationEmptyState => 'No notifications yet';

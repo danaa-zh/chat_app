@@ -412,10 +412,17 @@ class AppLocalizationsKk extends AppLocalizations {
   String get requestSent => 'Сұраныс жіберілді';
 
   @override
-  String get notificationsTitle => 'Хабарламалар';
+  String get notifications => 'Хабарламалар';
 
   @override
-  String get markAllRead => 'Барлығын оқу';
+  String get markAllRead => 'Барлығын оқылған деп белгілеу';
+
+  @override
+  String get noNotifications => 'Хабарламалар жоқ';
+
+  @override
+  String get notificationsEmptyMessage =>
+      'Достық сұраулары, хабарламалар немесе басқа жаңартуларды алған кезде олар осында көрсетіледі.';
 
   @override
   String get notificationEmptyState => 'Әзірге хабарламалар жоқ';

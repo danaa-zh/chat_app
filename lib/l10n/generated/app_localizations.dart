@@ -850,17 +850,29 @@ abstract class AppLocalizations {
   /// **'Request Sent'**
   String get requestSent;
 
-  /// No description provided for @notificationsTitle.
+  /// No description provided for @notifications.
   ///
   /// In en, this message translates to:
   /// **'Notifications'**
-  String get notificationsTitle;
+  String get notifications;
 
   /// No description provided for @markAllRead.
   ///
   /// In en, this message translates to:
   /// **'Mark all as read'**
   String get markAllRead;
+
+  /// No description provided for @noNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'No notifications'**
+  String get noNotifications;
+
+  /// No description provided for @notificationsEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'When you receive friend requests, messages, or other updates, they will appear here.'**
+  String get notificationsEmptyMessage;
 
   /// No description provided for @notificationEmptyState.
   ///

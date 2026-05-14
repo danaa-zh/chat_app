@@ -163,8 +163,12 @@
   "pending": "Күтілуде",
   "accepted": "Қабылданды",
   "requestSent": "Сұраныс жіберілді",
-  "notificationsTitle": "Хабарламалар",
-  "markAllRead": "Барлығын оқу",
+
+  "notifications": "Хабарламалар",
+  "markAllRead": "Барлығын оқылған деп белгілеу",
+  "noNotifications": "Хабарламалар жоқ",
+  "notificationsEmptyMessage": "Достық сұраулары, хабарламалар немесе басқа жаңартуларды алған кезде олар осында көрсетіледі.",
+
   "notificationEmptyState": "Әзірге хабарламалар жоқ",
   "notificationWelcomeTitle": "AlmaTalk-қа қош келдіңіз!",
   "notificationWelcomeDesc": "Біз сізді мұнда көргенімізге қуаныштымыз. Қазір сөйлесуді бастаңыз!",

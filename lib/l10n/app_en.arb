@@ -162,8 +162,11 @@
   "pending": "Pending",
   "accepted": "Accepted",
   "requestSent": "Request Sent",
-  "notificationsTitle": "Notifications",
+
+  "notifications": "Notifications",
   "markAllRead": "Mark all as read",
+  "noNotifications": "No notifications",
+  "notificationsEmptyMessage": "When you receive friend requests, messages, or other updates, they will appear here.",
 
   "notificationEmptyState": "No notifications yet",
   "notificationWelcomeTitle": "Welcome to AlmaTalk!",

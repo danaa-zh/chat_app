@@ -161,8 +161,12 @@
   "pending": "В ожидании",
   "accepted": "Принято",
   "requestSent": "Запрос отправлен",
-  "notificationsTitle": "Уведомления",
-  "markAllRead": "Прочитать все",
+
+  "notifications": "Уведомления",
+  "markAllRead": "Отметить все прочитанными",
+  "noNotifications": "Нет уведомлений",
+  "notificationsEmptyMessage": "Когда вы получите запросы в друзья, сообщения или другие обновления, они появятся здесь.",
+
   "notificationEmptyState": "У вас пока нет уведомлений",
   "notificationWelcomeTitle": "Добро пожаловать в AlmaTalk!",
   "notificationWelcomeDesc": "Мы рады видеть вас здесь. Начните общаться прямо сейчас!",

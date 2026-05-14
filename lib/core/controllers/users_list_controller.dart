@@ -30,8 +30,11 @@ class UsersListController extends GetxController {
   final RxMap<String, UserRelationshipStatus> _userRelationships =
       <String, UserRelationshipStatus>{}.obs;
   final RxList<FriendRequestModel> _sentRequests = <FriendRequestModel>[].obs;
-  final RxList<FriendRequestModel> _receivedRequests = <FriendRequestModel>[].obs;
+  final RxList<FriendRequestModel> _receivedRequests =
+      <FriendRequestModel>[].obs;
   final RxList<FriendshipModel> _friendships = <FriendshipModel>[].obs;
+  final RxMap<String, bool> _userLoadingStates = <String, bool>{}.obs;
+  bool isUserLoading(String userId) => _userLoadingStates[userId] ?? false;
 
   List<UserModel> get users => _users;
   List<UserModel> get filteredUsers => _filteredUsers;
@@ -167,58 +170,52 @@ class UsersListController extends GetxController {
 
   Future<void> sendFriendRequest(UserModel user) async {
     try {
-      _isLoading.value = true;
+      _userLoadingStates[user.id] = true; // 👈 per-user lock
       final currentUserId = _authController.user?.uid;
+      if (currentUserId == null) return;
 
-      if (currentUserId != null) {
-        final request = FriendRequestModel(
-          id: _uuid.v4(),
-          senderId: currentUserId,
-          receiverId: user.id,
-          createdAt: DateTime.now(),
-        );
-
-        _userRelationships[user.id] = UserRelationshipStatus.friendRequestSent;
-
-        await _firestoreService.sendFriendRequest(request);
-
-        Get.snackbar('Success', 'Friend Request Sent To ${user.displayName}');
-      }
+      final request = FriendRequestModel(
+        id: _uuid.v4(),
+        senderId: currentUserId,
+        receiverId: user.id,
+        createdAt: DateTime.now(),
+      );
+      await _firestoreService.sendFriendRequest(request);
+      Get.snackbar('Success', 'Friend request sent to ${user.displayName}');
     } catch (e) {
-      _userRelationships[user.id] = UserRelationshipStatus.none;
       _error.value = e.toString();
-      Get.log("Error sending friend request: $e");
-      Get.snackbar('Error', "Failed to send friend request");
+      Get.snackbar('Error', 'Failed to send friend request');
     } finally {
-      _isLoading.value = false;
+      _userLoadingStates[user.id] = false; // 👈 release lock
     }
   }
 
   Future<void> cancelFriendRequest(UserModel user) async {
     try {
-      _isLoading.value = true;
+      _userLoadingStates[user.id] = true;
       final currentUserId = _authController.user?.uid;
+      if (currentUserId == null) return;
 
-      if (currentUserId != null) {
-        final request = _sentRequests.firstWhereOrNull(
-          (r) =>
-              r.receiverId == user.id &&
-              r.status == FriendRequestStatus.pending,
+      final request = _sentRequests.firstWhereOrNull(
+        (r) =>
+            r.receiverId == user.id && r.status == FriendRequestStatus.pending,
+      );
+
+      if (request == null) {
+        Get.snackbar(
+          'Info',
+          'Request not found — it may have already been cancelled',
         );
-
-        if (request != null) {
-          _userRelationships[user.id] = UserRelationshipStatus.none;
-          await _firestoreService.cancelFriendRequest(request.id);
-          Get.snackbar('Success', 'Friend Request Cancelled');
-        }
+        return;
       }
+
+      await _firestoreService.cancelFriendRequest(request.id);
+      Get.snackbar('Success', 'Friend request cancelled');
     } catch (e) {
-      _userRelationships[user.id] = UserRelationshipStatus.friendRequestSent;
       _error.value = e.toString();
-      Get.log("Error cancelling friend request: $e");
-      Get.snackbar('Error', "Failed to cancel friend request");
+      Get.snackbar('Error', 'Failed to cancel friend request');
     } finally {
-      _isLoading.value = false;
+      _userLoadingStates[user.id] = false;
     }
   }
 
@@ -229,7 +226,8 @@ class UsersListController extends GetxController {
 
       if (currentUserId != null) {
         final request = _receivedRequests.firstWhereOrNull(
-          (r) => r.senderId == user.id && r.status == FriendRequestStatus.pending,
+          (r) =>
+              r.senderId == user.id && r.status == FriendRequestStatus.pending,
         );
 
         if (request != null) {
@@ -242,7 +240,8 @@ class UsersListController extends GetxController {
         }
       }
     } catch (e) {
-      _userRelationships[user.id] = UserRelationshipStatus.friendRequestReceived;
+      _userRelationships[user.id] =
+          UserRelationshipStatus.friendRequestReceived;
       _error.value = e.toString();
       Get.log("Error accepting friend request: $e");
       Get.snackbar('Error', "Failed to accept friend request");
@@ -258,7 +257,8 @@ class UsersListController extends GetxController {
 
       if (currentUserId != null) {
         final request = _receivedRequests.firstWhereOrNull(
-          (r) => r.senderId == user.id && r.status == FriendRequestStatus.pending,
+          (r) =>
+              r.senderId == user.id && r.status == FriendRequestStatus.pending,
         );
 
         if (request != null) {
@@ -273,7 +273,8 @@ class UsersListController extends GetxController {
         }
       }
     } catch (e) {
-      _userRelationships[user.id] = UserRelationshipStatus.friendRequestReceived;
+      _userRelationships[user.id] =
+          UserRelationshipStatus.friendRequestReceived;
       _error.value = e.toString();
       Get.log("Error declining friend request: $e");
       Get.snackbar('Error', "Failed to decline friend request");
@@ -288,7 +289,8 @@ class UsersListController extends GetxController {
       final currentUserId = _authController.user?.uid;
 
       if (currentUserId != null) {
-        final relationship = _userRelationships[user.id] ?? UserRelationshipStatus.none;
+        final relationship =
+            _userRelationships[user.id] ?? UserRelationshipStatus.none;
 
         if (relationship != UserRelationshipStatus.friends) {
           Get.snackbar(
@@ -367,23 +369,19 @@ class UsersListController extends GetxController {
   }
 
   void handleRelationshipButtonPress(UserModel user) {
+    if (isUserLoading(user.id)) return;
     final status = getUserRelationshipStatus(user.id);
     switch (status) {
       case UserRelationshipStatus.none:
         sendFriendRequest(user);
-        break;
       case UserRelationshipStatus.friendRequestSent:
         cancelFriendRequest(user);
-        break;
       case UserRelationshipStatus.friendRequestReceived:
         acceptFriendRequest(user);
-        break;
       case UserRelationshipStatus.friends:
         startChat(user);
-        break;
       case UserRelationshipStatus.blocked:
-        Get.snackbar('Info', "You have blocked this user.");
-        break;
+        Get.snackbar('Info', 'You have blocked this user.');
     }
   }
 

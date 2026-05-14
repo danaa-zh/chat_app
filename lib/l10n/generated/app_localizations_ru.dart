@@ -411,10 +411,17 @@ class AppLocalizationsRu extends AppLocalizations {
   String get requestSent => 'Запрос отправлен';
 
   @override
-  String get notificationsTitle => 'Уведомления';
+  String get notifications => 'Уведомления';
 
   @override
-  String get markAllRead => 'Прочитать все';
+  String get markAllRead => 'Отметить все прочитанными';
+
+  @override
+  String get noNotifications => 'Нет уведомлений';
+
+  @override
+  String get notificationsEmptyMessage =>
+      'Когда вы получите запросы в друзья, сообщения или другие обновления, они появятся здесь.';
 
   @override
   String get notificationEmptyState => 'У вас пока нет уведомлений';

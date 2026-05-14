@@ -28,12 +28,12 @@ class HomeFab extends StatelessWidget {
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
         elevation: AppConstants.elevation,
-        icon: const Icon(Icons.chat_rounded, size: AppSpacings.lg),
+        icon: const Icon(Icons.chat_rounded, size: AppSpacings.xxl),
         label: Text(
           context.loc.newChat,
           style: Theme.of(
             context,
-          ).textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold),
+          ).textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
     );
