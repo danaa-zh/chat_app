@@ -24,7 +24,8 @@ class UserListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(() {
       final status = controller.getUserRelationshipStatus(user.id);
-      if (status == UserRelationshipStatus.friends) return const SizedBox.shrink();
+      if (status == UserRelationshipStatus.friends)
+        return const SizedBox.shrink();
 
       return Card(
         child: Padding(
@@ -33,9 +34,7 @@ class UserListItem extends StatelessWidget {
             children: [
               _UserAvatar(displayName: user.displayName),
               const SizedBox(width: AppSpacings.lg),
-              Expanded(
-                child: _UserInfo(user: user),
-              ),
+              Expanded(child: _UserInfo(user: user)),
               _RelationshipActions(
                 user: user,
                 status: status,
@@ -64,9 +63,9 @@ class _UserAvatar extends StatelessWidget {
       child: Text(
         displayName.isNotEmpty ? displayName[0].toUpperCase() : '?',
         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-            ),
+          color: Colors.white,
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
   }
@@ -86,17 +85,17 @@ class _UserInfo extends StatelessWidget {
       children: [
         Text(
           user.displayName,
-          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
+          style: Theme.of(
+            context,
+          ).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
           overflow: TextOverflow.ellipsis,
         ),
         const SizedBox(height: AppSpacings.xs),
         Text(
           user.email,
-          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: AppColors.textSecondary,
-              ),
+          style: Theme.of(
+            context,
+          ).textTheme.bodyMedium?.copyWith(color: AppColors.textSecondary),
           overflow: TextOverflow.ellipsis,
         ),
       ],
@@ -119,12 +118,13 @@ class _RelationshipActions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
+    return Row(
+      // 👈 was Column
+      mainAxisSize: MainAxisSize.min,
       children: [
         _buildPrimaryButton(context),
         if (status == UserRelationshipStatus.friendRequestReceived) ...[
-          const SizedBox(height: AppSpacings.xs),
+          const SizedBox(width: AppSpacings.xs), // 👈 was height
           _DeclineButton(user: user, controller: controller),
         ],
       ],
@@ -140,22 +140,18 @@ class _RelationshipActions extends StatelessWidget {
           status: status,
           controller: controller,
         );
-
       case UserRelationshipStatus.friendRequestSent:
         return _SentRequestButton(
           user: user,
           status: status,
           controller: controller,
         );
-
       case UserRelationshipStatus.friends:
       case UserRelationshipStatus.blocked:
         return const SizedBox.shrink();
     }
   }
 }
-
-// ── Primary Action Button ──────────────────────────────────────────────────
 
 class _PrimaryActionButton extends StatelessWidget {
   final UserModel user;
@@ -170,9 +166,16 @@ class _PrimaryActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (status == UserRelationshipStatus.friendRequestReceived) {
+      return _AcceptIconButton(user: user, controller: controller);
+    }
+
     return ElevatedButton.icon(
       onPressed: () => controller.handleRelationshipButtonPress(user),
-      icon: Icon(controller.getRelationshipButtonIcon(status), size: AppSpacings.xl),
+      icon: Icon(
+        controller.getRelationshipButtonIcon(status),
+        size: AppSpacings.lg,
+      ),
       label: Text(controller.getRelationshipButtonText(status)),
       style: ElevatedButton.styleFrom(
         backgroundColor: controller.getRelationshipButtonColor(status),
@@ -187,7 +190,63 @@ class _PrimaryActionButton extends StatelessWidget {
   }
 }
 
-// ── Sent Request Button ────────────────────────────────────────────────────
+// ── Accept Icon Button (✓) ─────────────────────────────────────────────────
+
+class _AcceptIconButton extends StatelessWidget {
+  final UserModel user;
+  final UsersListController controller;
+
+  const _AcceptIconButton({required this.user, required this.controller});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: AppSpacings.screenLg,
+      height: AppSpacings.screenLg,
+      decoration: BoxDecoration(
+        color: AppColors.success,
+        shape: BoxShape.circle,
+      ),
+      child: IconButton(
+        padding: EdgeInsets.zero,
+        icon: const Icon(
+          Icons.check,
+          color: Colors.white,
+          size: AppSpacings.lg,
+        ),
+        onPressed: () => controller.handleRelationshipButtonPress(user),
+      ),
+    );
+  }
+}
+
+// ── Decline Button (✕) ────────────────────────────────────────────────────
+
+class _DeclineButton extends StatelessWidget {
+  final UserModel user;
+  final UsersListController controller;
+
+  const _DeclineButton({required this.user, required this.controller});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: AppSpacings.screenLg,
+      height: AppSpacings.screenLg,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(color: AppColors.error),
+      ),
+      child: IconButton(
+        padding: EdgeInsets.zero,
+        icon: Icon(Icons.close, color: AppColors.error, size: AppSpacings.lg),
+        onPressed: () => controller.declineFriendRequest(user),
+      ),
+    );
+  }
+}
+
+// ── Sent Request (Pending + Cancel) ───────────────────────────────────────
 
 class _SentRequestButton extends StatelessWidget {
   final UserModel user;
@@ -202,72 +261,67 @@ class _SentRequestButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = controller.getRelationshipButtonColor(status);
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
+    return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         Container(
           padding: const EdgeInsets.symmetric(
-            vertical: AppPaddings.sm,
-            horizontal: AppPaddings.md,
+            horizontal: AppPaddings.sm,
+            vertical: AppPaddings.xs,
           ),
           decoration: BoxDecoration(
-            color: color.withValues(alpha: 0.1),
-            borderRadius: BorderRadius.circular(AppRadius.md),
-            border: Border.all(color: color),
+            color: AppColors.secondary.withValues(alpha: 0.1),
+            borderRadius: BorderRadius.circular(AppRadius.full),
+            border: Border.all(
+              color: AppColors.secondary.withValues(alpha: 0.4),
+            ),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               Icon(
-                controller.getRelationshipButtonIcon(status),
-                color: color,
-                size: AppSpacings.xl,
+                Icons.access_time_rounded,
+                size: AppSpacings.lg,
+                color: AppColors.secondary,
               ),
               const SizedBox(width: AppSpacings.xs),
               Text(
-                controller.getRelationshipButtonText(status),
+                context.loc.pending,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: color,
-                      fontWeight: FontWeight.w600,
-                    ),
+                  color: AppColors.secondary,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ],
           ),
         ),
-        const SizedBox(height: AppSpacings.xs),
+        const SizedBox(width: AppSpacings.xs),
         _CancelRequestButton(user: user, controller: controller),
       ],
     );
   }
 }
 
-// ── Cancel Request Button ──────────────────────────────────────────────────
+// ── Cancel Request Button (✕ small) ───────────────────────────────────────
 
 class _CancelRequestButton extends StatelessWidget {
   final UserModel user;
   final UsersListController controller;
 
-  const _CancelRequestButton({
-    required this.user,
-    required this.controller,
-  });
+  const _CancelRequestButton({required this.user, required this.controller});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton.icon(
-      onPressed: () => _showCancelDialog(context),
-      icon: const Icon(Icons.cancel_outlined, size: AppSpacings.xl),
-      label: Text(context.loc.cancel),
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.error,
-        foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(
-          vertical: AppPaddings.xs,
-          horizontal: AppPaddings.sm,
+    return GestureDetector(
+      onTap: () => _showCancelDialog(context),
+      child: Container(
+        width: AppSpacings.screenLg,
+        height: AppSpacings.screenLg,
+        decoration: BoxDecoration(
+          color: AppColors.error.withValues(alpha: 0.1),
+          shape: BoxShape.circle,
         ),
-        minimumSize: const Size(0, AppSpacings.blockLg),
+        child: Icon(Icons.close, size: AppSpacings.lg, color: AppColors.error),
       ),
     );
   }
@@ -276,14 +330,9 @@ class _CancelRequestButton extends StatelessWidget {
     Get.dialog(
       AlertDialog(
         title: Text(context.loc.cancelFriendRequestTitle),
-        content: Text(
-          context.loc.cancelFriendRequestMessage(user.displayName),
-        ),
+        content: Text(context.loc.cancelFriendRequestMessage(user.displayName)),
         actions: [
-          TextButton(
-            onPressed: Get.back,
-            child: Text(context.loc.keepRequest),
-          ),
+          TextButton(onPressed: Get.back, child: Text(context.loc.keepRequest)),
           TextButton(
             onPressed: () {
               Get.back();
@@ -293,35 +342,6 @@ class _CancelRequestButton extends StatelessWidget {
             child: Text(context.loc.cancelRequest),
           ),
         ],
-      ),
-    );
-  }
-}
-
-// ── Decline Button ─────────────────────────────────────────────────────────
-
-class _DeclineButton extends StatelessWidget {
-  final UserModel user;
-  final UsersListController controller;
-
-  const _DeclineButton({
-    required this.user,
-    required this.controller,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return OutlinedButton.icon(
-      onPressed: () => controller.declineFriendRequest(user),
-      icon: const Icon(Icons.close, size: AppSpacings.xl),
-      label: Text(context.loc.decline),
-      style: OutlinedButton.styleFrom(
-        foregroundColor: AppColors.error,
-        padding: const EdgeInsets.symmetric(
-          vertical: AppPaddings.xs,
-          horizontal: AppPaddings.sm,
-        ),
-        minimumSize: const Size(0, AppSpacings.blockLg),
       ),
     );
   }

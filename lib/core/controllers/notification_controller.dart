@@ -26,7 +26,26 @@ class NotificationController extends GetxController {
   void onInit() {
     super.onInit();
     _loadNotifications();
-    _loadUsers();
+    ever(
+      _notifications,
+      _onNotificationsChanged,
+    ); 
+  }
+
+  void _onNotificationsChanged(List<NotificationModel> notifications) {
+    for (final notification in notifications) {
+      final userId =
+          notification.data['senderId'] ?? notification.data['userId'];
+      if (userId != null) {
+        _loadUserIfNeeded(userId);
+      }
+    }
+  }
+
+  Future<void> _loadUserIfNeeded(String userId) async {
+    if (_users.containsKey(userId)) return;
+    final user = await _firestoreService.getUser(userId);
+    if (user != null) _users[userId] = user;
   }
 
   void _loadNotifications() {
@@ -36,16 +55,6 @@ class NotificationController extends GetxController {
         _firestoreService.getNotificationsStream(currentUserId),
       );
     }
-  }
-
-  void _loadUsers() {
-    _firestoreService.getAllUsersStream().listen((userList) {
-      Map<String, UserModel> userMap = {};
-      for (var user in userList) {
-        userMap[user.id] = user;
-      }
-      _users.value = userMap;
-    });
   }
 
   UserModel? getUser(String userId) {
@@ -116,12 +125,7 @@ class NotificationController extends GetxController {
         if (userId != null) {
           final user = getUser(userId);
           if (user != null) {
-            Get.toNamed(
-              AppRoutes.chat,
-              arguments: {
-                'otherUser': user,
-              },
-            );
+            Get.toNamed(AppRoutes.chat, arguments: {'otherUser': user});
           }
         }
         break;

@@ -379,10 +379,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'Start a new conversation with your friends';
 
   @override
-  String get online => 'online';
+  String get online => 'Online';
 
   @override
-  String get offline => 'offline';
+  String get offline => 'Offline';
 
   @override
   String get lastSeen => 'last seen recently';
@@ -455,10 +455,13 @@ class AppLocalizationsEn extends AppLocalizations {
       'A new version of the app is available.';
 
   @override
-  String get typeMessage => 'Type a message...';
+  String get typeMessage => 'Type a message';
 
   @override
   String get send => 'Send';
+
+  @override
+  String get edited => 'Edited';
 
   @override
   String get settingsTitle => 'Settings';
@@ -559,4 +562,35 @@ class AppLocalizationsEn extends AppLocalizations {
   String notificationNewRequestDesc(String name) {
     return 'You have a new friend request from $name.';
   }
+
+  @override
+  String get chat => 'Chat';
+
+  @override
+  String get startConversation => 'Start the conversation';
+
+  @override
+  String get sendMessageToStart => 'Send a message to get the chat started';
+
+  @override
+  String get editMessage => 'Edit Message';
+
+  @override
+  String get deleteMessage => 'Delete Message';
+
+  @override
+  String get enterNewMessage => 'Enter new message';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get deleteMessageConfirm =>
+      'Are you sure you want to delete this message? This cannot be undone';
+
+  @override
+  String get delete => 'Delete';
+
+  @override
+  String get selectLanguage => 'Select Language';
 }

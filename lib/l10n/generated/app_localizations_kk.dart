@@ -379,10 +379,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get noConversationsDescription => 'Достарыңызбен сөйлесуді бастаңыз';
 
   @override
-  String get online => 'желіде';
+  String get online => 'Желіде';
 
   @override
-  String get offline => 'желіде емес';
+  String get offline => 'Желіде емес';
 
   @override
   String get lastSeen => 'жақында болған';
@@ -455,10 +455,13 @@ class AppLocalizationsKk extends AppLocalizations {
       'Қолданбаның жаңа нұсқасы қолжетімді.';
 
   @override
-  String get typeMessage => 'Хабарлама жазыңыз...';
+  String get typeMessage => 'Хабарлама енгізіңіз';
 
   @override
   String get send => 'Жіберу';
+
+  @override
+  String get edited => 'Өзгертілді';
 
   @override
   String get settingsTitle => 'Баптаулар';
@@ -560,4 +563,35 @@ class AppLocalizationsKk extends AppLocalizations {
   String notificationNewRequestDesc(String name) {
     return 'Сізде $name пайдаланушысынан жаңа достық сұранысы бар.';
   }
+
+  @override
+  String get chat => 'Чат';
+
+  @override
+  String get startConversation => 'Әңгіме бастаңыз';
+
+  @override
+  String get sendMessageToStart => 'Чатты бастау үшін хабарлама жіберіңіз';
+
+  @override
+  String get editMessage => 'Хабарламаны өңдеу';
+
+  @override
+  String get deleteMessage => 'Хабарламаны жою';
+
+  @override
+  String get enterNewMessage => 'Жаңа хабарлама енгізіңіз';
+
+  @override
+  String get save => 'Сақтау';
+
+  @override
+  String get deleteMessageConfirm =>
+      'Бұл хабарламаны жойғыңыз келетініне сенімдісіз бе? Бұл қайтымсыз';
+
+  @override
+  String get delete => 'Жою';
+
+  @override
+  String get selectLanguage => 'Тілді таңдаңыз';
 }

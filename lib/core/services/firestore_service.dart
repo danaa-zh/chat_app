@@ -544,24 +544,24 @@ class FirestoreService {
         message.receiverId,
       );
 
-      await _firestore.collection('messages').add(message.toMap());
+      // Fix: use set with the message's own ID instead of add()
+      await _firestore
+          .collection('messages')
+          .doc(message.id)
+          .set(message.toMap());
 
       await updateChatLastMessage(chatId, message);
-
       await updateUserLastSeen(chatId, message.senderId);
 
       DocumentSnapshot chatDoc = await _firestore
           .collection('chats')
           .doc(chatId)
           .get();
-
       if (chatDoc.exists) {
         ChatModel chat = ChatModel.fromMap(
           chatDoc.data() as Map<String, dynamic>,
         );
-
         int currentUnread = chat.getUserCount(message.receiverId);
-
         await updateUnreadCount(chatId, message.receiverId, currentUnread + 1);
       }
     } catch (e) {

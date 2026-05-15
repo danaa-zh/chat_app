@@ -179,6 +179,7 @@
   "notificationSystemUpdateDesc": "A new version of the app is available.",
   "typeMessage": "Type a message...",
   "send": "Send",
+  "edited": "Edited",
 
   "settingsTitle": "Settings",
   "settingsAppSettings": "App Settings",
@@ -227,5 +228,21 @@
         "type": "String"
       }
     }
-  }
+  },
+
+  "chat": "Chat",
+  "online": "Online",
+  "offline": "Offline",
+  "deleteChat": "Delete Chat",
+  "startConversation": "Start the conversation",
+  "sendMessageToStart": "Send a message to get the chat started",
+  "typeMessage": "Type a message",
+  "editMessage": "Edit Message",
+  "deleteMessage": "Delete Message",
+  "enterNewMessage": "Enter new message",
+  "cancel": "Cancel",
+  "save": "Save",
+  "deleteMessageConfirm": "Are you sure you want to delete this message? This cannot be undone",
+  "delete": "Delete", 
+  "selectLanguage": "Select Language"
 }

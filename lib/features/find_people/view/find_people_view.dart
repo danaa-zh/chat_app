@@ -20,9 +20,15 @@ class FindPeopleView extends GetView<UsersListController> {
         children: [
           PeopleSearchBar(controller: controller),
           Expanded(
-            child: Obx(() => controller.filteredUsers.isEmpty
-                ? PeopleEmptyState(controller: controller)
-                : PeopleUserList(controller: controller)),
+            child: Obx(() {
+              if (controller.isLoading) {
+                return const Center(child: CircularProgressIndicator());
+              }
+              if (controller.filteredUsers.isEmpty) {
+                return PeopleEmptyState(controller: controller);
+              }
+              return PeopleUserList(controller: controller);
+            }),
           ),
         ],
       ),

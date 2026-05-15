@@ -178,6 +178,7 @@
   "notificationSystemUpdateDesc": "Доступна новая версия приложения.",
   "typeMessage": "Введите сообщение...",
   "send": "Отправить",
+  "edited": "Изменено",
 
   "settingsTitle": "Настройки",
   "settingsAppSettings": "Настройки приложения",
@@ -226,5 +227,21 @@
         "type": "String"
       }
     }
-  }
+  },
+
+  "chat": "Чат",
+  "online": "В сети",
+  "offline": "Не в сети",
+  "deleteChat": "Удалить чат",
+  "startConversation": "Начните беседу",
+  "sendMessageToStart": "Отправьте сообщение, чтобы начать чат",
+  "typeMessage": "Введите сообщение",
+  "editMessage": "Редактировать сообщение",
+  "deleteMessage": "Удалить сообщение",
+  "enterNewMessage": "Введите новое сообщение",
+  "cancel": "Отмена",
+  "save": "Сохранить",
+  "deleteMessageConfirm": "Вы уверены, что хотите удалить это сообщение? Это действие нельзя отменить",
+  "delete": "Удалить",
+  "selectLanguage": "Выберите язык"
 }

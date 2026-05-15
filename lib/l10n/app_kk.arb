@@ -180,6 +180,7 @@
   "notificationSystemUpdateDesc": "Қолданбаның жаңа нұсқасы қолжетімді.",
   "typeMessage": "Хабарлама жазыңыз...",
   "send": "Жіберу",
+  "edited": "Өзгертілді",
 
   "settingsTitle": "Баптаулар",
   "settingsAppSettings": "Қолданба баптаулары",
@@ -228,5 +229,21 @@
         "type": "String"
       }
     }
-  }
+  },
+
+  "chat": "Чат",
+  "online": "Желіде",
+  "offline": "Желіде емес",
+  "deleteChat": "Чатты жою",
+  "startConversation": "Әңгіме бастаңыз",
+  "sendMessageToStart": "Чатты бастау үшін хабарлама жіберіңіз",
+  "typeMessage": "Хабарлама енгізіңіз",
+  "editMessage": "Хабарламаны өңдеу",
+  "deleteMessage": "Хабарламаны жою",
+  "enterNewMessage": "Жаңа хабарлама енгізіңіз",
+  "cancel": "Болдырмау",
+  "save": "Сақтау",
+  "deleteMessageConfirm": "Бұл хабарламаны жойғыңыз келетініне сенімдісіз бе? Бұл қайтымсыз",
+  "delete": "Жою",
+  "selectLanguage": "Тілді таңдаңыз"
 }

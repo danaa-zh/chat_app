@@ -1,5 +1,4 @@
 import 'package:chat_app/core/controllers/auth_controller.dart';
-import 'package:chat_app/core/controllers/base_controller.dart';
 import 'package:chat_app/core/controllers/change_password_controller.dart';
 import 'package:chat_app/core/controllers/forgot_password_controller.dart';
 import 'package:chat_app/core/controllers/friend_requests_controller.dart';
@@ -21,10 +20,6 @@ class MainBinding extends Bindings {
     Get.lazyPut<UsersListController>(() => UsersListController());
     Get.lazyPut<ProfileController>(() => ProfileController());
     Get.lazyPut<NotificationController>(() => NotificationController());
-    Get.lazyPut<SplashController>(() => SplashController());
-    Get.lazyPut<AuthController>(() => AuthController());
-    Get.lazyPut<ChangePasswordController>(() => ChangePasswordController());
-    Get.lazyPut<ForgotPasswordController>(() => ForgotPasswordController());
     Get.lazyPut<FriendRequestsController>(() => FriendRequestsController());
   }
 }

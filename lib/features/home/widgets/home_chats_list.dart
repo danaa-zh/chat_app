@@ -5,7 +5,6 @@ import 'package:chat_app/core/constants/app_spacings.dart';
 import 'package:chat_app/core/controllers/home_controller.dart';
 import 'package:chat_app/core/extensions/context_extension.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
-import 'package:chat_app/features/home/widgets/home_chats_list.dart';
 import 'package:chat_app/features/widgets/chat_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -378,10 +378,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get noConversationsDescription => 'Начните общение со своими друзьями';
 
   @override
-  String get online => 'в сети';
+  String get online => 'В сети';
 
   @override
-  String get offline => 'не в сети';
+  String get offline => 'Не в сети';
 
   @override
   String get lastSeen => 'был(а) недавно';
@@ -454,10 +454,13 @@ class AppLocalizationsRu extends AppLocalizations {
       'Доступна новая версия приложения.';
 
   @override
-  String get typeMessage => 'Введите сообщение...';
+  String get typeMessage => 'Введите сообщение';
 
   @override
   String get send => 'Отправить';
+
+  @override
+  String get edited => 'Изменено';
 
   @override
   String get settingsTitle => 'Настройки';
@@ -559,4 +562,35 @@ class AppLocalizationsRu extends AppLocalizations {
   String notificationNewRequestDesc(String name) {
     return 'У вас новый запрос в друзья от $name.';
   }
+
+  @override
+  String get chat => 'Чат';
+
+  @override
+  String get startConversation => 'Начните беседу';
+
+  @override
+  String get sendMessageToStart => 'Отправьте сообщение, чтобы начать чат';
+
+  @override
+  String get editMessage => 'Редактировать сообщение';
+
+  @override
+  String get deleteMessage => 'Удалить сообщение';
+
+  @override
+  String get enterNewMessage => 'Введите новое сообщение';
+
+  @override
+  String get save => 'Сохранить';
+
+  @override
+  String get deleteMessageConfirm =>
+      'Вы уверены, что хотите удалить это сообщение? Это действие нельзя отменить';
+
+  @override
+  String get delete => 'Удалить';
+
+  @override
+  String get selectLanguage => 'Выберите язык';
 }

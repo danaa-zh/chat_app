@@ -2,6 +2,7 @@ import 'package:chat_app/data/models/user_model.dart';
 import 'package:chat_app/core/router/app_routes.dart';
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:chat_app/core/services/auth_service.dart';
 
 class AuthController extends GetxController {
@@ -24,64 +25,64 @@ class AuthController extends GetxController {
   void onInit() {
     super.onInit();
     _user.bindStream(_authService.authStateChanges);
-    ever(_user, _handleAuthStateChange); 
+    ever(_user, _handleAuthStateChange);
     _initAuth();
   }
 
   Future<void> _initAuth() async {
     final user = await _authService.authStateChanges.first;
-
     _isInitialized.value = true;
 
     if (user == null) {
       _user.value = null;
-      Get.offAllNamed(AppRoutes.login);
+      _navigateTo(AppRoutes.login);
       return;
     }
 
     _user.value = user;
     await _loadUserModel(user.uid);
-    Get.offAllNamed(AppRoutes.main);
+    _navigateTo(AppRoutes.main);
   }
 
   void _handleAuthStateChange(User? user) {
     if (!_isInitialized.value) return;
     if (user == null && _userModel.value != null) {
       _userModel.value = null;
-      Get.offAllNamed(AppRoutes.login);
+      _navigateTo(AppRoutes.login);
     }
+  }
+
+  // ── Single navigation helper ───────────────────────────────────────────────
+
+  void _navigateTo(String route) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Get.offAllNamed(route); // always navigate, no guard
+    });
   }
 
   Future<void> _loadUserModel(String uid) async {
     try {
       final userModel = await _authService.getUser(uid);
-      if (userModel != null) {
-        _userModel.value = userModel;
-      }
+      if (userModel != null) _userModel.value = userModel;
     } catch (e) {
       Get.log('Failed to load user model: $e');
     }
   }
 
   String _getUserFriendlyErrorMessage(FirebaseAuthException e) {
-    switch (e.code) {
-      case 'wrong-password':
-        return 'Incorrect password. Please try again.';
-      case 'user-not-found':
-        return 'No account found with this email. Please register first.';
-      case 'email-already-in-use':
-        return 'This email is already registered. Please sign in.';
-      case 'weak-password':
-        return 'Password is too weak. Please use a stronger password.';
-      case 'invalid-email':
-        return 'Invalid email address. Please check and try again.';
-      case 'network-request-failed':
-        return 'Network error. Please check your internet connection.';
-      case 'too-many-requests':
-        return 'Too many attempts. Please try again later.';
-      default:
-        return 'Authentication failed. Please try again.';
-    }
+    const messages = {
+      'wrong-password': 'Incorrect password. Please try again.',
+      'user-not-found':
+          'No account found with this email. Please register first.',
+      'email-already-in-use':
+          'This email is already registered. Please sign in.',
+      'weak-password': 'Password is too weak. Please use a stronger password.',
+      'invalid-email': 'Invalid email address. Please check and try again.',
+      'network-request-failed':
+          'Network error. Please check your internet connection.',
+      'too-many-requests': 'Too many attempts. Please try again later.',
+    };
+    return messages[e.code] ?? 'Authentication failed. Please try again.';
   }
 
   Future<void> _runAuthAction<T>(
@@ -96,7 +97,7 @@ class AuthController extends GetxController {
 
       if (result != null && result is UserModel) {
         _userModel.value = result;
-        Get.offAllNamed(AppRoutes.main); 
+        _navigateTo(AppRoutes.main);
       }
 
       if (successMessage.isNotEmpty) {
@@ -150,7 +151,7 @@ class AuthController extends GetxController {
       await _authService.signOut();
       _userModel.value = null;
       _user.value = null;
-      Get.offAllNamed(AppRoutes.login);
+      _navigateTo(AppRoutes.login);
     } catch (e) {
       _error.value = e.toString();
       Get.snackbar('Error', 'Failed To Sign Out');
@@ -173,7 +174,5 @@ class AuthController extends GetxController {
     );
   }
 
-  void clearError() {
-    _error.value = '';
-  }
+  void clearError() => _error.value = '';
 }

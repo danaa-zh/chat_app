@@ -2,16 +2,11 @@
 import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/constants/app_spacings.dart';
 import 'package:chat_app/core/constants/asset_paths.dart';
-import 'package:chat_app/core/controllers/auth_controller.dart';
 import 'package:chat_app/core/theme/app_colors.dart';
 import 'package:chat_app/core/theme/app_text_styles.dart';
 // import 'package:chat_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_app/core/extensions/context_extension.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_instance/src/extension_instance.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:chat_app/core/router/app_routes.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -44,23 +39,9 @@ class _SplashViewState extends State<SplashView>
     );
 
     _animationController.forward();
-
-    _checkAuthAndNavigate();
   }
 
-  void _checkAuthAndNavigate() async {
-  await Future.delayed(Duration(seconds: 2));
 
-  final authController = Get.put(AuthController(), permanent: true);
-
-  await Future.delayed(Duration(milliseconds: 500));
-
-  if (authController.isAuthenticated) {
-    Get.offAllNamed(AppRoutes.profile);
-  } else {
-    Get.offAllNamed(AppRoutes.login);
-  }
-}
 
 @override
   void dispose() {

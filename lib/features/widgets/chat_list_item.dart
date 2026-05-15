@@ -61,6 +61,10 @@ class ChatListItem extends StatelessWidget {
   }
 
   void _showChatOptions(BuildContext context, HomeController homeController) {
+    final deleteChatLabel = context.loc.deleteChat;
+    final deleteChatSubtitleLabel = context.loc.deleteChatSubtitle;
+    final viewProfileLabel = context.loc.viewProfile;
+
     Get.bottomSheet(
       Container(
         padding: const EdgeInsets.all(AppPaddings.lg),
@@ -84,8 +88,8 @@ class ChatListItem extends StatelessWidget {
             const SizedBox(height: AppSpacings.lg),
             ListTile(
               leading: Icon(Icons.delete_outline, color: AppColors.error),
-              title: Text(context.loc.deleteChat),
-              subtitle: Text(context.loc.deleteChatSubtitle),
+              title: Text(deleteChatLabel),
+              subtitle: Text(deleteChatSubtitleLabel),
               onTap: () {
                 Get.back();
                 homeController.deleteChat(chat);
@@ -93,10 +97,9 @@ class ChatListItem extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(Icons.person_outline, color: AppColors.primary),
-              title: Text(context.loc.viewProfile),
+              title: Text(viewProfileLabel),
               onTap: () {
                 Get.back();
-                // navigate to user profile
               },
             ),
             const SizedBox(height: AppSpacings.md),
@@ -119,16 +122,18 @@ class _ChatAvatar extends StatelessWidget {
     return Stack(
       children: [
         CircleAvatar(
-          radius: AppConstants.avatarRadius,
+          radius: AppRadius.blockLg,
           backgroundColor: AppColors.primary,
           child: user.photoURL.isNotEmpty
-              ? ClipOval(
+              ? ClipRRect(
+                  borderRadius: BorderRadius.circular(AppRadius.blockLg),
                   child: Image.network(
                     user.photoURL,
-                    width: AppConstants.urlImageSize,
-                    height: AppConstants.urlImageSize,
+                    width: AppRadius.blockLg * 2,
+                    height: AppRadius.blockLg * 2,
                     fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => _AvatarInitial(displayName: user.displayName),
+                    errorBuilder: (_, __, ___) =>
+                        _AvatarInitial(displayName: user.displayName),
                   ),
                 )
               : _AvatarInitial(displayName: user.displayName),
@@ -148,10 +153,10 @@ class _AvatarInitial extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       displayName.isNotEmpty ? displayName[0].toUpperCase() : '?',
-      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
+      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
     );
   }
 }
@@ -169,8 +174,11 @@ class _OnlineIndicator extends StatelessWidget {
         height: AppSpacings.xxl,
         decoration: BoxDecoration(
           color: AppColors.success,
-          border: Border.all(color: Colors.white, width: 2),
-          borderRadius: BorderRadius.circular(AppRadius.full),
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: Theme.of(context).scaffoldBackgroundColor,
+            width: 2,
+          ),
         ),
       ),
     );
@@ -179,7 +187,7 @@ class _OnlineIndicator extends StatelessWidget {
 
 // ── Info ──────────────────────────────────────────────────────────────────
 
-class _ChatInfo extends StatelessWidget {
+class _ChatInfo extends StatefulWidget {
   final ChatModel chat;
   final UserModel otherUser;
   final String lastMessageTime;
@@ -195,8 +203,14 @@ class _ChatInfo extends StatelessWidget {
   });
 
   @override
+  State<_ChatInfo> createState() => _ChatInfoState();
+}
+
+class _ChatInfoState extends State<_ChatInfo> {
+  @override
   Widget build(BuildContext context) {
-    final isOwnMessage = chat.lastMessageSenderId == currentUserId;
+    final isOwnMessage =
+        widget.chat.lastMessageSenderId == widget.currentUserId;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -206,36 +220,51 @@ class _ChatInfo extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                otherUser.displayName,
+                widget.otherUser.displayName,
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontWeight: unreadCount > 0 ? FontWeight.bold : FontWeight.normal,
-                    ),
+                  fontWeight: widget.unreadCount > 0
+                      ? FontWeight.bold
+                      : FontWeight.w600,
+                ),
                 overflow: TextOverflow.ellipsis,
               ),
             ),
-            if (lastMessageTime.isNotEmpty)
+            if (widget.lastMessageTime.isNotEmpty)
               Text(
-                lastMessageTime,
+                widget.lastMessageTime,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: unreadCount > 0 ? AppColors.primary : AppColors.textSecondary,
-                      fontWeight: unreadCount > 0 ? FontWeight.bold : FontWeight.normal,
-                    ),
+                  color: widget.unreadCount > 0
+                      ? AppColors.primary
+                      : AppColors.textSecondary,
+                  fontWeight: widget.unreadCount > 0
+                      ? FontWeight.bold
+                      : FontWeight.normal,
+                ),
               ),
           ],
         ),
+        const SizedBox(height: AppSpacings.xs),
         Row(
           children: [
             if (isOwnMessage) ...[
-              Icon(_getSeenStatusIcon(), size: AppSpacings.sm, color: _getSeenStatusColor()),
+              Icon(
+                _getSeenStatusIcon(),
+                size: AppSpacings.sm,
+                color: _getSeenStatusColor(),
+              ),
               const SizedBox(width: AppSpacings.xs),
             ],
             Expanded(
               child: Text(
-                chat.lastMessage ?? context.loc.noMessagesYet,
+                widget.chat.lastMessage ?? context.loc.noMessagesYet,
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: unreadCount > 0 ? AppColors.primary : AppColors.textSecondary,
-                      fontWeight: unreadCount > 0 ? FontWeight.bold : FontWeight.normal,
-                    ),
+                  color: widget.unreadCount > 0
+                      ? AppColors.primary
+                      : AppColors.textSecondary,
+                  fontWeight: widget.unreadCount > 0
+                      ? FontWeight.bold
+                      : FontWeight.normal,
+                ),
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
               ),
@@ -247,9 +276,9 @@ class _ChatInfo extends StatelessWidget {
           Text(
             _getSeenStatusText(context),
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: _getSeenStatusColor(),
-                  fontSize: 11,
-                ),
+              color: _getSeenStatusColor(),
+              fontSize: 11,
+            ),
           ),
         ],
       ],
@@ -257,18 +286,24 @@ class _ChatInfo extends StatelessWidget {
   }
 
   IconData _getSeenStatusIcon() {
-    final otherUserId = chat.getOtherParticipant(currentUserId);
-    return chat.isMessageSeen(currentUserId, otherUserId) ? Icons.done_all : Icons.done;
+    final otherUserId = widget.chat.getOtherParticipant(widget.currentUserId);
+    return widget.chat.isMessageSeen(widget.currentUserId, otherUserId)
+        ? Icons.done_all
+        : Icons.done;
   }
 
   Color _getSeenStatusColor() {
-    final otherUserId = chat.getOtherParticipant(currentUserId);
-    return chat.isMessageSeen(currentUserId, otherUserId) ? AppColors.primary : AppColors.textSecondary;
+    final otherUserId = widget.chat.getOtherParticipant(widget.currentUserId);
+    return widget.chat.isMessageSeen(widget.currentUserId, otherUserId)
+        ? AppColors.primary
+        : AppColors.textSecondary;
   }
 
-  String _getSeenStatusText(dynamic context) {
-    final otherUserId = chat.getOtherParticipant(currentUserId);
-    return chat.isMessageSeen(currentUserId, otherUserId) ? context.loc.seen : context.loc.delivered;
+  String _getSeenStatusText(BuildContext context) {
+    final otherUserId = widget.chat.getOtherParticipant(widget.currentUserId);
+    return widget.chat.isMessageSeen(widget.currentUserId, otherUserId)
+        ? context.loc.seen
+        : context.loc.delivered;
   }
 }
 
@@ -283,7 +318,10 @@ class _UnreadBadge extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: AppSpacings.sm),
-      padding: const EdgeInsets.symmetric(horizontal: AppSpacings.sm, vertical: AppSpacings.xxs),
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppSpacings.sm,
+        vertical: AppSpacings.xxs,
+      ),
       decoration: BoxDecoration(
         color: AppColors.primary,
         borderRadius: BorderRadius.circular(AppRadius.md),
@@ -291,9 +329,9 @@ class _UnreadBadge extends StatelessWidget {
       child: Text(
         unreadCount > 99 ? '99+' : unreadCount.toString(),
         style: Theme.of(context).textTheme.bodySmall?.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }

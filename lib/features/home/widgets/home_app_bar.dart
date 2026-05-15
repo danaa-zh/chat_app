@@ -57,41 +57,42 @@ class _NotificationButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final unreadNotifications = controller.getUnreadNotificationsCount();
-
-    return Stack(
-      children: [
-        IconButton(
-          onPressed: controller.openNotifications,
-          icon: const Icon(Icons.notifications_outlined),
-        ),
-        if (unreadNotifications > 0)
-          Positioned(
-            right: AppSpacings.xs,
-            top: AppSpacings.xs,
-            child: Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: AppSpacings.xxxs,
-                horizontal: AppSpacings.xxs,
-              ),
-              decoration: BoxDecoration(
-                color: AppColors.error,
-                borderRadius: BorderRadius.circular(AppRadius.sm),
-                border: Border.all(color: Colors.white, width: 1.5),
-              ),
-              child: Text(
-                unreadNotifications > 99
-                    ? '99+'
-                    : unreadNotifications.toString(),
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: Colors.white,
-                  fontSize: 9,
-                  fontWeight: FontWeight.w600,
+    return Obx(() {
+      final unreadNotifications = controller.getUnreadNotificationsCount();
+      return Stack(
+        children: [
+          IconButton(
+            onPressed: controller.openNotifications,
+            icon: const Icon(Icons.notifications_outlined),
+          ),
+          if (unreadNotifications > 0)
+            Positioned(
+              right: AppSpacings.xs,
+              top: AppSpacings.xs,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: AppSpacings.xxxs,
+                  horizontal: AppSpacings.xxs,
+                ),
+                decoration: BoxDecoration(
+                  color: AppColors.error,
+                  borderRadius: BorderRadius.circular(AppRadius.sm),
+                  border: Border.all(color: Colors.white, width: 1.5),
+                ),
+                child: Text(
+                  unreadNotifications > 99
+                      ? '99+'
+                      : unreadNotifications.toString(),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: Colors.white,
+                    fontSize: 9,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ),
-          ),
-      ],
-    );
+        ],
+      );
+    });
   }
 }

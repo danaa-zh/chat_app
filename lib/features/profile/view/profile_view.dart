@@ -1,3 +1,4 @@
+import 'package:chat_app/core/controllers/language_controller.dart';
 import 'package:chat_app/core/controllers/profile_controller.dart';
 import 'package:chat_app/core/constants/app_constants.dart';
 import 'package:chat_app/core/constants/app_paddings.dart';
@@ -8,6 +9,7 @@ import 'package:chat_app/features/profile/view/widgets/profile_actions_card.dart
 import 'package:chat_app/features/profile/view/widgets/profile_avatar.dart';
 import 'package:chat_app/features/profile/view/widgets/profile_info_header.dart';
 import 'package:chat_app/features/profile/view/widgets/profile_personal_card.dart';
+import 'package:chat_app/features/widgets/language_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,11 +21,13 @@ class ProfileView extends GetView<ProfileController> {
     return Scaffold(
       appBar: AppBar(
         title: Text(context.loc.profile),
-        leading: Icon(
-          // onPressed: () => Get.back(),
-          Icons.apple,
-          color: Colors.transparent,
-        ),
+        leading: Obx(() {
+          final lang = Get.find<LanguageController>();
+          return IconButton(
+            onPressed: LanguageBottomSheet.show,
+            icon: Text(lang.currentFlag, style: const TextStyle(fontSize: 22)),
+          );
+        }),
         actions: [
           Obx(
             () => TextButton(

@@ -13,6 +13,7 @@ class AppSpacings {
   static const double block = 24;
   static const double blockLg = 28;
   static const double screen = 32;
+  static const double screenLg = 36;
   static const double hero = 40;
   static const double fifty = 50;
   static const double jumbo = 52;

@@ -787,13 +787,13 @@ abstract class AppLocalizations {
   /// No description provided for @online.
   ///
   /// In en, this message translates to:
-  /// **'online'**
+  /// **'Online'**
   String get online;
 
   /// No description provided for @offline.
   ///
   /// In en, this message translates to:
-  /// **'offline'**
+  /// **'Offline'**
   String get offline;
 
   /// No description provided for @lastSeen.
@@ -931,7 +931,7 @@ abstract class AppLocalizations {
   /// No description provided for @typeMessage.
   ///
   /// In en, this message translates to:
-  /// **'Type a message...'**
+  /// **'Type a message'**
   String get typeMessage;
 
   /// No description provided for @send.
@@ -939,6 +939,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Send'**
   String get send;
+
+  /// No description provided for @edited.
+  ///
+  /// In en, this message translates to:
+  /// **'Edited'**
+  String get edited;
 
   /// No description provided for @settingsTitle.
   ///
@@ -1131,6 +1137,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You have a new friend request from {name}.'**
   String notificationNewRequestDesc(String name);
+
+  /// No description provided for @chat.
+  ///
+  /// In en, this message translates to:
+  /// **'Chat'**
+  String get chat;
+
+  /// No description provided for @startConversation.
+  ///
+  /// In en, this message translates to:
+  /// **'Start the conversation'**
+  String get startConversation;
+
+  /// No description provided for @sendMessageToStart.
+  ///
+  /// In en, this message translates to:
+  /// **'Send a message to get the chat started'**
+  String get sendMessageToStart;
+
+  /// No description provided for @editMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Message'**
+  String get editMessage;
+
+  /// No description provided for @deleteMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Message'**
+  String get deleteMessage;
+
+  /// No description provided for @enterNewMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter new message'**
+  String get enterNewMessage;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @deleteMessageConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this message? This cannot be undone'**
+  String get deleteMessageConfirm;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// No description provided for @selectLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Language'**
+  String get selectLanguage;
 }
 
 class _AppLocalizationsDelegate
