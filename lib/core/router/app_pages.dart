@@ -12,14 +12,11 @@ import 'package:chat_app/features/home/view/home_view.dart';
 import 'package:chat_app/features/main/binding/main_binding.dart';
 import 'package:chat_app/features/notifications/view/notification_view.dart';
 import 'package:chat_app/features/profile/view/change_password_view.dart';
-import 'package:chat_app/core/controllers/profile_controller.dart';
 import 'package:chat_app/core/router/app_routes.dart';
 import 'package:chat_app/features/auth/view/forgot_password_view.dart';
 import 'package:chat_app/features/auth/view/login_view.dart';
 import 'package:chat_app/features/auth/view/register_view.dart';
-import 'package:chat_app/features/profile/view/profile_view.dart';
 import 'package:chat_app/features/shell/view/app_shell.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:chat_app/features/splash/view/splash_view.dart';
